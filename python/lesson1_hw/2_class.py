@@ -1,22 +1,49 @@
 class Rectangle:
-    def __init__(self, width, height):
-        self.width = width
-        self.height = height
+    """class that represents rectangle. Have methods for getting area, perimeter, is_square and resize"""
+    def __init__(self, width: float, height: float):
+        """
+        Initialize a rectangle with width and height.
+        :param width: The width of the rectangle.
+        :param height: The height of the rectangle.
+        """
+        self.width: float = width
+        self.height: float = height
 
-    def area(self):
+    def area(self) -> float:
+        """
+        Calculate the area of the rectangle.
+        :return: The area as a float.
+        """
         return self.width * self.height
 
-    def perimeter(self):
+    def perimeter(self) -> float:
+        """
+        Calculate the perimeter of the rectangle.
+        :return: The perimeter as a float.
+        """
         return 2 * (self.width + self.height)
 
-    def is_square(self):
+    def is_square(self) -> bool:
+        """
+        Check if the rectangle is a square.
+        :return: True if it is a square, False otherwise.
+        """
         return self.width == self.height
 
-    def resize(self, new_width, new_height):
+    def resize(self, new_width, new_height) -> None:
+        """
+        Resize the rectangle to new dimensions.
+        :param new_width: The new width of the rectangle.
+        :param new_height: The new height of the rectangle.
+        """
         self.width = new_width
         self.height = new_height
 
-    def __str__(self):
+    def __str__(self) -> str:
+        """
+        Return a string representation of the rectangle.
+        :return: A string with the rectangle's dimensions.
+        """
         return f"Rectangle(width={self.width}, height={self.height})"
 
 

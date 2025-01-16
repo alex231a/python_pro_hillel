@@ -1,5 +1,6 @@
 class Rectangle:
-    """class that represents rectangle. Have methods for getting area, perimeter, is_square and resize"""
+    """class that represents rectangle. Have methods for getting area,
+    perimeter, is_square and resize"""
     def __init__(self, width: float, height: float):
         """
         Initialize a rectangle with width and height.
@@ -61,4 +62,3 @@ print(test_rectangle.__str__())
 print(f"Rectangle new area is {test_rectangle.area()}")
 print(f"Rectangle new perimeter is {test_rectangle.perimeter()}")
 print(f"Is the new rectangle a square? {test_rectangle.is_square()}")
-

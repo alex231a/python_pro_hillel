@@ -1,7 +1,11 @@
 import inspect
+from typing import Type
 
 
-def analyze_inheritance(cls):
+def analyze_inheritance(cls: Type):
+    """Analyzes a given class and prints methods inherited from its base
+    classes"""
+
     print(f"Class {cls.__name__} inherits:")
 
     for base_class in inspect.getmro(cls)[1:]:

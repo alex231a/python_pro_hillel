@@ -1,5 +1,4 @@
 def analyze_object(obj_in: object):
-
     """function that analyzes an object"""
 
     print(f"Object type:\n - {type(obj)}")
@@ -20,4 +19,3 @@ class MyClass:
 
 obj = MyClass("World")
 analyze_object(obj)
-

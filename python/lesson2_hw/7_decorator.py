@@ -1,8 +1,21 @@
-def log_methods(cls):
+from typing import Any, Callable, Type
+
+
+def log_methods(cls: Type):
+    """A class decorator that wraps all callable methods (excluding dunder
+    methods)
+    with logging functionality."""
+
     for attr_name, attr_value in cls.__dict__.items():
         if callable(attr_value) and not attr_name.startswith('__'):
-            def create_wrapper(attr_value, attr_name):
-                def wrapper(self, *args, **kwargs):
+            def create_wrapper(attr_value: Callable[..., Any], attr_name: str):
+                """Creates a wrapper function that logs the method calls and
+                their arguments."""
+
+                def wrapper(self: Any, *args: Any, **kwargs: Any):
+
+                    """Wrapper function to log method calls."""
+
                     if not args:
                         args_to_log = ''
                     else:

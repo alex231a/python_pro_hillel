@@ -1,4 +1,9 @@
-def call_function(obj, method_name, *args):
+from typing import Any
+
+
+def call_function(obj: str, method_name: str, *args: Any):
+    """Call method of object with given name and arguments"""
+
     if not obj.__getattribute__(method_name):
         raise AttributeError(f"Object {obj} has no method {method_name}")
     return obj.__getattribute__(method_name)(*args)

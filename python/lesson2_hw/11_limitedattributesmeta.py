@@ -1,5 +1,13 @@
+from typing import Dict, Type, Any
+
+
 class LimitedAttributesMeta(type):
-    def __new__(cls, name, bases, attrs):
+    """A metaclass that limits the number of attributes a class can have."""
+
+    def __new__(cls: Type, name: str, bases: tuple, attrs: Dict[str, Any]):
+        """Creates a new class and raises an error if the number of
+        attributes exceeds the limit."""
+
         max_attrs = 3
         list_attr = [attr for attr in attrs if not attr.startswith('__')]
         if len(list_attr) > max_attrs:

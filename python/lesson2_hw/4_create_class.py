@@ -1,4 +1,9 @@
-def create_class(class_name, methods):
+from typing import Dict, Callable, Any, Type
+
+
+def create_class(class_name: str, methods: Dict[str, Callable[..., Any]]):
+    """Function that creates a class with given name and methods."""
+
     return type(class_name, (object,), methods)
 
 

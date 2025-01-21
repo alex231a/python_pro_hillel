@@ -1,6 +1,11 @@
 import inspect
 
-def analyze_module(module_name):
+
+def analyze_module(module_name: str):
+    """
+    Analyzes the given Python module by inspecting its functions and classes.
+    """
+
     try:
         imported_module = __import__(module_name)
     except ImportError:

@@ -1,12 +1,26 @@
+from typing import Any
+
+
 class Proxy:
-    def __init__(self, obj):
+    """A proxy class that wraps an object and logs method calls with their
+    arguments."""
+
+    def __init__(self, obj: Any):
         self._obj = obj
 
-    def __getattr__(self, name):
+    def __getattr__(self, name: str):
+
+        """Retrieves an attribute from the proxied object. If the attribute
+        is callable,
+        it wraps it to log calls and arguments."""
+
         attr = getattr(self._obj, name)
 
         if callable(attr):
-            def wrapper(*args, **kwargs):
+            def wrapper(*args: Any, **kwargs: Any):
+
+                """Wrapper function to log method calls and arguments."""
+
                 if not args:
                     args_to_log = ''
                 else:
@@ -21,7 +35,6 @@ class Proxy:
 
             return wrapper
         return attr
-
 
 
 class MyClass:

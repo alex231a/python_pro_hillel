@@ -15,7 +15,7 @@ class Vector:
         self.y = y
 
     @classmethod
-    def _verify_data(cls, other):
+    def _verify_data(cls, other: (int, "Vector")):
         if not isinstance(other, (int, Vector)):
             raise ValueError("Invalid values.")
 
@@ -62,7 +62,7 @@ class Vector:
             y = other - self.y
             return Vector(x, y)
 
-    def __mul__(self, other):
+    def __mul__(self, other: (int, "Vector")):
         """Multiply two vectors together or multiply value to vector
         coordinates."""
         self._verify_data(other)
@@ -78,13 +78,13 @@ class Vector:
     def __rmul__(self, other):
         return self * other
 
-    def __eq__(self, other):
+    def __eq__(self, other: "Vector"):
         if not isinstance(other, Vector):
             raise ValueError("Invalid values.")
         else:
             return self.x == other.x and self.y == other.y
 
-    def __lt__(self, other):
+    def __lt__(self, other: "Vector"):
         if not isinstance(other, Vector):
             raise ValueError("Invalid values.")
         else:

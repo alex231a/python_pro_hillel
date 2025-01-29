@@ -32,7 +32,7 @@ class GetAvgValue:
 
 
 if __name__ == "__main__":
-    calc = GetAvgValue('numbers.txt')
+    calc = GetAvgValue('empty_file.txt')
     result = calc.get_avg_value()
     if result is not None:
         print(result)

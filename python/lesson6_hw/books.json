@@ -1,0 +1,20 @@
+[
+    {
+        "book_name": "Bookname1",
+        "author_name": "Author1",
+        "year": 1955,
+        "available": true
+    },
+    {
+        "book_name": "Bookname2",
+        "author_name": "Author2",
+        "year": 1956,
+        "available": true
+    },
+    {
+        "book_name": "Bookname7",
+        "author_name": "Author8",
+        "year": 2021,
+        "available": true
+    }
+]

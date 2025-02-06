@@ -1,0 +1,3 @@
+Sample data with 
+ newlines
+ and tabs	

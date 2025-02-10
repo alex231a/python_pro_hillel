@@ -9,7 +9,7 @@ class FinalMeta(type):
     def __new__(mcs, name, bases, dct):
         if name != "Config" and any(
                 issubclass(base, Config) for base in bases):
-            raise TypeError(f"'{name}' class cannot inherit from 'Config'")
+            raise TypeError(f"'{name}' class cannot be inherit from 'Config'")
         return super().__new__(mcs, name, bases, dct)
 
 

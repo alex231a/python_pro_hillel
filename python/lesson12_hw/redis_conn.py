@@ -21,14 +21,14 @@ def create_session(user_id: str, session_token: str) -> None:
         'login_time': str(time.time())
     }
     try:
-        # Create session and set an expiration time (TTL) of 5 minutes (300
+        # Create session and set an expiration time (TTL) of 30 minutes (1800
         # seconds)
         r.setex(f'session:{user_id}', 1800, json.dumps(
             session_data))  # Set the session data with 30-minute expiration
         r.expire(f'session:{user_id}',
-                 300)  # Set the TTL (expire) to 5 minutes
+                 1800)  # Set the TTL (expire) to 5 minutes
         print(
-            f"Session for user {user_id} has been created with a TTL of 5 "
+            f"Session for user {user_id} has been created with a TTL of 30 "
             f"minutes.")
     except redis.RedisError as error:
         print(f"Error creating session for {user_id}: {error}")
@@ -58,14 +58,14 @@ def update_session(user_id: str) -> None:
     if session_data:
         session_data['login_time'] = str(time.time())
         try:
-            # Update session and reset the TTL (expire) to 5 minutes (300
+            # Update session and reset the TTL (expire) to 30 minutes (1800
             # seconds)
             r.setex(f'session:{user_id}', 1800, json.dumps(
                 session_data))  # Reset expiration time to 30 minutes
             r.expire(f'session:{user_id}',
-                     300)  # Reset TTL (expire) to 5 minutes
+                     1800)  # Reset TTL (expire) to 30 minutes
             print(
-                f"Session for {user_id} was updated with a TTL of 5 minutes.")
+                f"Session for {user_id} was updated with a TTL of 30 minutes.")
         except redis.RedisError as error:
             print(f"Error updating session for {user_id}: {error}")
     else:

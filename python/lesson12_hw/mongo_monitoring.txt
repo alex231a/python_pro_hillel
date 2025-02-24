@@ -1,0 +1,5 @@
+As i have community version of mongo_db, in MongoDB Compass Performance is not available. But it is possible to analyze
+requests with Schema-Analyze.
+Also, we can use mongostat if it's available:
+
+mongostat --host localhost --port 27017

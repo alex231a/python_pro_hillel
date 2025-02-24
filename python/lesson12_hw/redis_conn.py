@@ -2,11 +2,12 @@
 import json
 import time
 from typing import Optional, Dict, cast
-import redis
 
+import redis
 
 # Initialize Redis client globally
 r: redis.Redis = redis.Redis(host='localhost', port=6379, db=0)
+
 
 def create_session(user_id: str, session_token: str) -> None:
     """Function to create a session in Redis
@@ -20,8 +21,15 @@ def create_session(user_id: str, session_token: str) -> None:
         'login_time': str(time.time())
     }
     try:
-        r.setex(f'session:{user_id}', 1800, json.dumps(session_data))
-        print(f"Session for user {user_id} has been created.")
+        # Create session and set an expiration time (TTL) of 5 minutes (300
+        # seconds)
+        r.setex(f'session:{user_id}', 1800, json.dumps(
+            session_data))  # Set the session data with 30-minute expiration
+        r.expire(f'session:{user_id}',
+                 300)  # Set the TTL (expire) to 5 minutes
+        print(
+            f"Session for user {user_id} has been created with a TTL of 5 "
+            f"minutes.")
     except redis.RedisError as error:
         print(f"Error creating session for {user_id}: {error}")
 
@@ -50,8 +58,14 @@ def update_session(user_id: str) -> None:
     if session_data:
         session_data['login_time'] = str(time.time())
         try:
-            r.setex(f'session:{user_id}', 1800, json.dumps(session_data))
-            print(f"Session for {user_id} was updated.")
+            # Update session and reset the TTL (expire) to 5 minutes (300
+            # seconds)
+            r.setex(f'session:{user_id}', 1800, json.dumps(
+                session_data))  # Reset expiration time to 30 minutes
+            r.expire(f'session:{user_id}',
+                     300)  # Reset TTL (expire) to 5 minutes
+            print(
+                f"Session for {user_id} was updated with a TTL of 5 minutes.")
         except redis.RedisError as error:
             print(f"Error updating session for {user_id}: {error}")
     else:

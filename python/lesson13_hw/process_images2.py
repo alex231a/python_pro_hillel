@@ -1,3 +1,4 @@
+"""Module with class ProcessImage"""
 import concurrent.futures
 import os
 import shutil
@@ -45,8 +46,8 @@ class ProcessImage:
                 image = image.resize(new_size)
                 image.save(os.path.join(output_folder, image_name))
                 os.remove(image_path)  # Remove original image after processing
-            except Exception as e:
-                print(f"Error processing {image_name}: {e}")
+            except Exception as error:
+                print(f"Error processing {image_name}: {error}")
 
         return os.getpid()
 

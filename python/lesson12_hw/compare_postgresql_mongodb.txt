@@ -1,0 +1,92 @@
+Будемо проводити порівняння на прикладі двох сутностей:
+
+Product (id, name, price, category, stock)
+Order (id, order_number, client_id, products (список товарів), total_amount, date)
+
+
+PostgreSQL - окремі таблиці з зовнішніми ключами
+MongoDB - замовлення містять вкладені документи з продуктами.
+
+CRUD SQL:
+
+CREATE TABLE products (
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    price NUMERIC NOT NULL,
+    category TEXT,
+    stock INT NOT NULL
+);
+
+CREATE TABLE orders (
+    id SERIAL PRIMARY KEY,
+    order_number TEXT UNIQUE NOT NULL,
+    client_id INT NOT NULL,
+    total_amount NUMERIC NOT NULL,
+    date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE order_items (
+    order_id INT REFERENCES orders(id),
+    product_id INT REFERENCES products(id),
+    quantity INT NOT NULL,
+    PRIMARY KEY (order_id, product_id)
+);
+
+
+INSERT INTO products (name, price, category, stock) VALUES ("iPhone 13", 999.99, "phones", 50)
+INSERT INTO orders (order_number, client_id, total_amount) VALUES ("ORD123", 2007, 1999.98)
+INSERT INTO order_items (order_id, product_id, quantity) VALUES (order_id, 1, 2)
+
+SELECT * FROM products
+
+SELECT o.order_number, o.client_id, o.total_amount, o.date, p.name, oi.quantity
+FROM orders o
+JOIN order_items oi ON o.id = oi.order_id
+JOIN products p ON oi.product_id = p.id
+WHERE o.id = 1;
+
+UPDATE products SET stock = stock - 2 WHERE id = 1
+
+DELETE FROM products WHERE id = 1
+
+
+CRUD MongoDB
+
+product = {"name": "iPhone 13", "price": 999.99, "category": "phones", "stock": 50}
+products_collection.insert_one(product)
+
+order = {
+    "order_number": "ORD123",
+    "client_id": 2007,
+    "products": [{"name": "iPhone 13", "quantity": 2}],
+    "total_amount": 1999.98,
+    "date": datetime.now()
+}
+orders_collection.insert_one(order)
+
+products = products_collection.find()
+for product in products:
+    print(product)
+
+
+order = orders_collection.find_one({"order_number": "ORD123"})
+print(order)
+
+products_collection.update_one(
+    {"name": "iPhone 13"}, {"$inc": {"stock": -2}}
+)
+
+orders_collection.delete_one({"order_number": "ORD123"})
+
+
+PostgreSQL (SQL) підходить для:
+    Фінансових систем, банків
+    ERP-систем (управління підприємством)
+    Додатків з високими вимогами до транзакційності та узгодженості даних
+
+MongoDB (NoSQL) підходить для:
+    Big Data, IoT, логування
+    Соціальних мереж, e-commerce
+    Додатків, що потребують гнучкої структури
+
+Якщо потрібно більше транзакційності — SQL. Якщо масштабованість та швидкість — NoSQL.

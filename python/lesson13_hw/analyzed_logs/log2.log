@@ -1,0 +1,66 @@
+05/02/2024 18:04:27.967 EEST main (07.003.11) INFORMATIVE: Aggregated 1 NMEs at a rate of 0 NMEs/sec
+05/02/2024 18:04:27.967 EEST main (07.002.12) INFORMATIVE: Scheme RAW flushed 1 NMEs
+05/02/2024 18:04:27.967 EEST main (07.018.01) INFORMATIVE: Scheme RAW tree contained 0 nmes, 0 flushed, 0 remain.
+05/02/2024 18:04:27.972 EEST main (07.002.12) INFORMATIVE: Scheme MDR flushed 1 NMEs
+05/02/2024 18:04:27.973 EEST main (07.018.01) INFORMATIVE: Scheme MDR tree contained 0 nmes, 0 flushed, 0 remain.
+05/02/2024 18:04:27.973 EEST main (07.002.12) INFORMATIVE: Scheme ERROR flushed 0 NMEs
+05/02/2024 18:04:27.973 EEST main (07.018.01) INFORMATIVE: Scheme ERROR tree contained 0 nmes, 0 flushed, 0 remain.
+05/02/2024 18:04:27.979 EEST main (06.016.04) INFORMATIVE: Wrote NME file: /var/opt/SIU8/INPUT_HUAWEI_FIX_FN/BIN/RAW/FN20240502_180423.bin for scheme RAW.
+05/02/2024 18:04:27.986 EEST main (06.016.04) INFORMATIVE: Wrote NME file: /var/opt/SIU8/INPUT_HUAWEI_FIX_FN/MDR_BIN/BILL_FN20240502_180423 for scheme MDR.
+05/02/2024 18:04:27.995 EEST main (06.016.04) INFORMATIVE: Wrote NME file: /var/opt/SIU8/INPUT_HUAWEI_FIX_FN/2021/Oct/06/INPUT_HUAWEI_FIX_FN_AuditSrc_08_51GMT for scheme AuditSrc.
+05/02/2024 18:04:28.004 EEST main (06.016.02) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_FIX_FN/BIN/RAW/FN20240502_180327.bin was aged out for scheme RAW.
+05/02/2024 18:04:28.009 EEST main (06.016.02) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_FIX_FN/MDR_BIN/BILL_FN20240502_180327 was aged out for scheme MDR.
+05/02/2024 18:04:28.015 EEST main (06.016.02) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_FIX_FN/2021/Oct/03/INPUT_HUAWEI_FIX_FN_AuditSrc_00_04GMT.4 was aged out for scheme AuditSrc.
+05/02/2024 18:04:28.061 EEST main (07.003.19) INFORMATIVE: Flushed 2 NMEs at a rate of 0 NMEs/sec
+05/02/2024 18:04:28.061 EEST main (47.002.13) INFORMATIVE: Flush of audited dataset 81 complete.
+05/02/2024 18:04:28.062 EEST main (08.025.01) INFORMATIVE: DeleteFile.cleanup(): Deleted file /home/ium/pack1/OFFLINE_MEDIATION/files/cache/FN20240502_180423
+05/02/2024 18:04:28.067 EEST LocalDeliveryAgent (06.050.01) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_FIX_FN/MDR_BIN/BILL_FN20240502_180423 has been sent to /home/ium/pack1/OFFLINE_MEDIATION/ENRICH_MDR/in/BILL_FN20240502_180423 on local directory /home/ium/pack1/OFFLINE_MEDIATION/ENRICH_MDR/in
+05/02/2024 18:04:28.071 EEST LocalDeliveryAgent (06.007.04) INFORMATIVE: DeliveryAgent(LocalDeliveryAgent): Dataset 58 has been delivered. 
+05/02/2024 18:04:38.075 EEST main (08.003.11) INFORMATIVE: Setting next file to: /home/ium/pack1/OFFLINE_MEDIATION/files/FN20240502_180436
+05/02/2024 18:04:38.084 EEST main (07.003.11) INFORMATIVE: Aggregated 1 NMEs at a rate of 0 NMEs/sec
+05/02/2024 18:04:38.085 EEST main (07.002.12) INFORMATIVE: Scheme RAW flushed 1 NMEs
+05/02/2024 18:04:38.085 EEST main (07.018.01) INFORMATIVE: Scheme RAW tree contained 0 nmes, 0 flushed, 0 remain.
+05/02/2024 18:04:38.091 EEST main (07.002.12) INFORMATIVE: Scheme MDR flushed 1 NMEs
+05/02/2024 18:04:38.091 EEST main (07.018.01) INFORMATIVE: Scheme MDR tree contained 0 nmes, 0 flushed, 0 remain.
+05/02/2024 18:04:38.092 EEST main (07.002.12) INFORMATIVE: Scheme ERROR flushed 0 NMEs
+05/02/2024 18:04:38.092 EEST main (07.018.01) INFORMATIVE: Scheme ERROR tree contained 0 nmes, 0 flushed, 0 remain.
+05/02/2024 18:04:38.097 EEST main (06.016.04) INFORMATIVE: Wrote NME file: /var/opt/SIU8/INPUT_HUAWEI_FIX_FN/BIN/RAW/FN20240502_180436.bin for scheme RAW.
+05/02/2024 18:04:38.103 EEST main (06.016.04) INFORMATIVE: Wrote NME file: /var/opt/SIU8/INPUT_HUAWEI_FIX_FN/MDR_BIN/BILL_FN20240502_180436 for scheme MDR.
+05/02/2024 18:04:38.111 EEST main (06.016.04) INFORMATIVE: Wrote NME file: /var/opt/SIU8/INPUT_HUAWEI_FIX_FN/2021/Oct/03/INPUT_HUAWEI_FIX_FN_AuditSrc_00_04GMT for scheme AuditSrc.
+05/02/2024 18:04:38.120 EEST main (06.016.02) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_FIX_FN/BIN/RAW/FN20240502_180333.bin was aged out for scheme RAW.
+05/02/2024 18:04:38.125 EEST main (06.016.02) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_FIX_FN/MDR_BIN/BILL_FN20240502_180333 was aged out for scheme MDR.
+05/02/2024 18:04:38.131 EEST main (06.016.02) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_FIX_FN/2021/Oct/03/INPUT_HUAWEI_FIX_FN_AuditSrc_00_04GMT.2 was aged out for scheme AuditSrc.
+05/02/2024 18:04:38.136 EEST main (07.003.19) INFORMATIVE: Flushed 2 NMEs at a rate of 0 NMEs/sec
+05/02/2024 18:04:38.137 EEST main (47.002.13) INFORMATIVE: Flush of audited dataset 82 complete.
+05/02/2024 18:04:38.138 EEST main (08.025.01) INFORMATIVE: DeleteFile.cleanup(): Deleted file /home/ium/pack1/OFFLINE_MEDIATION/files/cache/FN20240502_180436
+05/02/2024 18:04:38.142 EEST LocalDeliveryAgent (06.050.01) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_FIX_FN/MDR_BIN/BILL_FN20240502_180436 has been sent to /home/ium/pack1/OFFLINE_MEDIATION/ENRICH_MDR/in/BILL_FN20240502_180436 on local directory /home/ium/pack1/OFFLINE_MEDIATION/ENRICH_MDR/in
+05/02/2024 18:04:38.145 EEST LocalDeliveryAgent (06.007.04) INFORMATIVE: DeliveryAgent(LocalDeliveryAgent): Dataset 59 has been delivered. 
+05/02/2024 18:04:48.147 EEST main (08.003.11) INFORMATIVE: Setting next file to: /home/ium/pack1/OFFLINE_MEDIATION/files/FN20240502_180443
+05/02/2024 18:04:48.156 EEST main (07.003.11) INFORMATIVE: Aggregated 1 NMEs at a rate of 0 NMEs/sec
+05/02/2024 18:04:48.157 EEST main (07.002.12) INFORMATIVE: Scheme RAW flushed 1 NMEs
+05/02/2024 18:04:48.157 EEST main (07.018.01) INFORMATIVE: Scheme RAW tree contained 0 nmes, 0 flushed, 0 remain.
+05/02/2024 18:04:48.161 EEST main (07.002.12) INFORMATIVE: Scheme MDR flushed 1 NMEs
+05/02/2024 18:04:48.161 EEST main (07.018.01) INFORMATIVE: Scheme MDR tree contained 0 nmes, 0 flushed, 0 remain.
+05/02/2024 18:04:48.161 EEST main (07.002.12) INFORMATIVE: Scheme ERROR flushed 0 NMEs
+05/02/2024 18:04:48.162 EEST main (07.018.01) INFORMATIVE: Scheme ERROR tree contained 0 nmes, 0 flushed, 0 remain.
+05/02/2024 18:04:48.167 EEST main (06.016.04) INFORMATIVE: Wrote NME file: /var/opt/SIU8/INPUT_HUAWEI_FIX_FN/BIN/RAW/FN20240502_180443.bin for scheme RAW.
+05/02/2024 18:04:48.173 EEST main (06.016.04) INFORMATIVE: Wrote NME file: /var/opt/SIU8/INPUT_HUAWEI_FIX_FN/MDR_BIN/BILL_FN20240502_180443 for scheme MDR.
+05/02/2024 18:04:48.181 EEST main (06.016.04) INFORMATIVE: Wrote NME file: /var/opt/SIU8/INPUT_HUAWEI_FIX_FN/2021/Oct/06/INPUT_HUAWEI_FIX_FN_AuditSrc_08_51GMT.1 for scheme AuditSrc.
+05/02/2024 18:04:48.187 EEST main (06.016.02) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_FIX_FN/BIN/RAW/FN20240502_180340.bin was aged out for scheme RAW.
+05/02/2024 18:04:48.192 EEST main (06.016.02) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_FIX_FN/MDR_BIN/BILL_FN20240502_180340 was aged out for scheme MDR.
+05/02/2024 18:04:48.198 EEST main (06.016.02) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_FIX_FN/2021/Oct/03/INPUT_HUAWEI_FIX_FN_AuditSrc_00_04GMT.5 was aged out for scheme AuditSrc.
+05/02/2024 18:04:48.202 EEST main (07.003.19) INFORMATIVE: Flushed 2 NMEs at a rate of 0 NMEs/sec
+05/02/2024 18:04:48.203 EEST main (47.002.13) INFORMATIVE: Flush of audited dataset 83 complete.
+05/02/2024 18:04:48.203 EEST main (08.025.01) INFORMATIVE: DeleteFile.cleanup(): Deleted file /home/ium/pack1/OFFLINE_MEDIATION/files/cache/FN20240502_180443
+05/02/2024 18:04:48.208 EEST LocalDeliveryAgent (06.050.01) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_FIX_FN/MDR_BIN/BILL_FN20240502_180443 has been sent to /home/ium/pack1/OFFLINE_MEDIATION/ENRICH_MDR/in/BILL_FN20240502_180443 on local directory /home/ium/pack1/OFFLINE_MEDIATION/ENRICH_MDR/in
+05/02/2024 18:04:48.210 EEST LocalDeliveryAgent (06.007.04) INFORMATIVE: DeliveryAgent(LocalDeliveryAgent): Dataset 60 has been delivered. 
+05/02/2024 18:24:50.510 EEST RequestProcessor-4 (03.002.01) ACCOUNTING: Stop Collector
+05/02/2024 18:24:50.510 EEST RequestProcessor-4 (02.015.01) ACCOUNTING: Received Stop Request.
+05/02/2024 18:24:50.513 EEST main (06.016.06) WARNING: FileJDBCDatastore is aborting the current transaction.
+05/02/2024 18:24:50.514 EEST main (06.016.06) WARNING: FileJDBCDatastore is aborting the current transaction.
+05/02/2024 18:24:50.514 EEST main (06.016.06) WARNING: FileJDBCDatastore is aborting the current transaction.
+05/02/2024 18:24:50.514 EEST main (06.016.06) WARNING: FileJDBCDatastore is aborting the current transaction.
+05/02/2024 18:24:50.515 EEST main (08.036.02) INFORMATIVE: End of Input Data.  Collection Terminated.
+05/02/2024 18:24:50.515 EEST main (178.007.03) INFORMATIVE: stop service registry
+05/02/2024 18:24:50.518 EEST main (178.007.04) INFORMATIVE: destroy service registry
+05/02/2024 18:24:55.518 EEST main (03.003.25) ACCOUNTING: Collector INPUT_HUAWEI_FIX_FN shutting down.

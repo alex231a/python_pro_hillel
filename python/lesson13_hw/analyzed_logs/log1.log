@@ -1,0 +1,233 @@
+05/02/2024 14:42:20.067 EEST main (08.025.01) INFORMATIVE: DeleteFile.cleanup(): Deleted file /home/ium/pack1/OFFLINE_MEDIATION/files/cache/IS20240502_144216
+05/02/2024 14:42:20.071 EEST LocalDeliveryAgent (06.050.01) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_IMS/MDR_BIN/BILL_IS20240502_144216 has been sent to /home/ium/pack1/OFFLINE_MEDIATION/ENRICH_MDR/in/BILL_IS20240502_144216 on local directory /home/ium/pack1/OFFLINE_MEDIATION/ENRICH_MDR/in
+05/02/2024 14:42:20.073 EEST LocalDeliveryAgent (06.007.04) INFORMATIVE: DeliveryAgent(LocalDeliveryAgent): Dataset 267 has been delivered. 
+05/02/2024 14:42:25.072 EEST main (08.003.11) INFORMATIVE: Setting next file to: /home/ium/pack1/OFFLINE_MEDIATION/files/IS20240502_144224
+05/02/2024 14:42:25.080 EEST main (07.003.11) INFORMATIVE: Aggregated 2 NMEs at a rate of 0 NMEs/sec
+05/02/2024 14:42:25.080 EEST main (07.002.12) INFORMATIVE: Scheme RAW flushed 2 NMEs
+05/02/2024 14:42:25.080 EEST main (07.018.01) INFORMATIVE: Scheme RAW tree contained 0 nmes, 0 flushed, 0 remain.
+05/02/2024 14:42:25.083 EEST main (07.002.12) INFORMATIVE: Scheme MDR flushed 2 NMEs
+05/02/2024 14:42:25.083 EEST main (07.018.01) INFORMATIVE: Scheme MDR tree contained 0 nmes, 0 flushed, 0 remain.
+05/02/2024 14:42:25.084 EEST main (07.002.12) INFORMATIVE: Scheme ERROR flushed 0 NMEs
+05/02/2024 14:42:25.084 EEST main (07.018.01) INFORMATIVE: Scheme ERROR tree contained 0 nmes, 0 flushed, 0 remain.
+05/02/2024 14:42:25.088 EEST main (06.016.04) INFORMATIVE: Wrote NME file: /var/opt/SIU8/INPUT_HUAWEI_IMS/BIN/RAW/IS20240502_144224.bin for scheme RAW.
+05/02/2024 14:42:25.094 EEST main (06.016.04) INFORMATIVE: Wrote NME file: /var/opt/SIU8/INPUT_HUAWEI_IMS/MDR_BIN/BILL_IS20240502_144224 for scheme MDR.
+05/02/2024 14:42:25.100 EEST main (06.016.04) INFORMATIVE: Wrote NME file: /var/opt/SIU8/INPUT_HUAWEI_IMS/2015/Jul/22/INPUT_HUAWEI_IMS_AuditSrc_11_29GMT for scheme AuditSrc.
+05/02/2024 14:42:25.106 EEST main (06.016.02) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_IMS/BIN/RAW/IS20240502_144131.bin was aged out for scheme RAW.
+05/02/2024 14:42:25.111 EEST main (06.016.02) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_IMS/MDR_BIN/BILL_IS20240502_144131 was aged out for scheme MDR.
+05/02/2024 14:42:25.116 EEST main (06.016.02) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_IMS/2015/Jul/22/INPUT_HUAWEI_IMS_AuditSrc_11_51GMT was aged out for scheme AuditSrc.
+05/02/2024 14:42:25.120 EEST main (07.003.19) INFORMATIVE: Flushed 4 NMEs at a rate of 0 NMEs/sec
+05/02/2024 14:42:25.120 EEST main (47.002.13) INFORMATIVE: Flush of audited dataset 296 complete.
+05/02/2024 14:42:25.121 EEST main (08.025.01) INFORMATIVE: DeleteFile.cleanup(): Deleted file /home/ium/pack1/OFFLINE_MEDIATION/files/cache/IS20240502_144224
+05/02/2024 14:42:25.125 EEST LocalDeliveryAgent (06.050.01) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_IMS/MDR_BIN/BILL_IS20240502_144224 has been sent to /home/ium/pack1/OFFLINE_MEDIATION/ENRICH_MDR/in/BILL_IS20240502_144224 on local directory /home/ium/pack1/OFFLINE_MEDIATION/ENRICH_MDR/in
+05/02/2024 14:42:25.127 EEST LocalDeliveryAgent (06.007.04) INFORMATIVE: DeliveryAgent(LocalDeliveryAgent): Dataset 268 has been delivered. 
+05/02/2024 14:42:30.126 EEST main (08.003.11) INFORMATIVE: Setting next file to: /home/ium/pack1/OFFLINE_MEDIATION/files/IS20240502_144228
+05/02/2024 14:42:30.134 EEST main (07.003.11) INFORMATIVE: Aggregated 2 NMEs at a rate of 0 NMEs/sec
+05/02/2024 14:42:30.135 EEST main (07.002.12) INFORMATIVE: Scheme RAW flushed 2 NMEs
+05/02/2024 14:42:30.135 EEST main (07.018.01) INFORMATIVE: Scheme RAW tree contained 0 nmes, 0 flushed, 0 remain.
+05/02/2024 14:42:30.140 EEST main (07.002.12) INFORMATIVE: Scheme MDR flushed 2 NMEs
+05/02/2024 14:42:30.140 EEST main (07.018.01) INFORMATIVE: Scheme MDR tree contained 0 nmes, 0 flushed, 0 remain.
+05/02/2024 14:42:30.140 EEST main (07.002.12) INFORMATIVE: Scheme ERROR flushed 0 NMEs
+05/02/2024 14:42:30.140 EEST main (07.018.01) INFORMATIVE: Scheme ERROR tree contained 0 nmes, 0 flushed, 0 remain.
+05/02/2024 14:42:30.149 EEST main (06.016.04) INFORMATIVE: Wrote NME file: /var/opt/SIU8/INPUT_HUAWEI_IMS/BIN/RAW/IS20240502_144228.bin for scheme RAW.
+05/02/2024 14:42:30.154 EEST main (06.016.04) INFORMATIVE: Wrote NME file: /var/opt/SIU8/INPUT_HUAWEI_IMS/MDR_BIN/BILL_IS20240502_144228 for scheme MDR.
+05/02/2024 14:42:30.160 EEST main (06.016.04) INFORMATIVE: Wrote NME file: /var/opt/SIU8/INPUT_HUAWEI_IMS/2015/Jul/25/INPUT_HUAWEI_IMS_AuditSrc_05_31GMT for scheme AuditSrc.
+05/02/2024 14:42:30.166 EEST main (06.016.02) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_IMS/BIN/RAW/IS20240502_144135.bin was aged out for scheme RAW.
+05/02/2024 14:42:30.171 EEST main (06.016.02) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_IMS/MDR_BIN/BILL_IS20240502_144135 was aged out for scheme MDR.
+05/02/2024 14:42:30.176 EEST main (06.016.02) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_IMS/2015/Jul/22/INPUT_HUAWEI_IMS_AuditSrc_11_18GMT was aged out for scheme AuditSrc.
+05/02/2024 14:42:30.181 EEST main (07.003.19) INFORMATIVE: Flushed 4 NMEs at a rate of 0 NMEs/sec
+05/02/2024 14:42:30.182 EEST main (47.002.13) INFORMATIVE: Flush of audited dataset 297 complete.
+05/02/2024 14:42:30.182 EEST main (08.025.01) INFORMATIVE: DeleteFile.cleanup(): Deleted file /home/ium/pack1/OFFLINE_MEDIATION/files/cache/IS20240502_144228
+05/02/2024 14:42:30.186 EEST LocalDeliveryAgent (06.050.01) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_IMS/MDR_BIN/BILL_IS20240502_144228 has been sent to /home/ium/pack1/OFFLINE_MEDIATION/ENRICH_MDR/in/BILL_IS20240502_144228 on local directory /home/ium/pack1/OFFLINE_MEDIATION/ENRICH_MDR/in
+05/02/2024 14:42:30.189 EEST LocalDeliveryAgent (06.007.04) INFORMATIVE: DeliveryAgent(LocalDeliveryAgent): Dataset 269 has been delivered. 
+05/02/2024 14:42:35.187 EEST main (08.003.11) INFORMATIVE: Setting next file to: /home/ium/pack1/OFFLINE_MEDIATION/files/IS20240502_144233
+05/02/2024 14:42:35.194 EEST main (07.003.11) INFORMATIVE: Aggregated 1 NMEs at a rate of 0 NMEs/sec
+05/02/2024 14:42:35.195 EEST main (07.002.12) INFORMATIVE: Scheme RAW flushed 1 NMEs
+05/02/2024 14:42:35.195 EEST main (07.018.01) INFORMATIVE: Scheme RAW tree contained 0 nmes, 0 flushed, 0 remain.
+05/02/2024 14:42:35.198 EEST main (07.002.12) INFORMATIVE: Scheme MDR flushed 1 NMEs
+05/02/2024 14:42:35.198 EEST main (07.018.01) INFORMATIVE: Scheme MDR tree contained 0 nmes, 0 flushed, 0 remain.
+05/02/2024 14:42:35.198 EEST main (07.002.12) INFORMATIVE: Scheme ERROR flushed 0 NMEs
+05/02/2024 14:42:35.198 EEST main (07.018.01) INFORMATIVE: Scheme ERROR tree contained 0 nmes, 0 flushed, 0 remain.
+05/02/2024 14:42:35.203 EEST main (06.016.04) INFORMATIVE: Wrote NME file: /var/opt/SIU8/INPUT_HUAWEI_IMS/BIN/RAW/IS20240502_144233.bin for scheme RAW.
+05/02/2024 14:42:35.208 EEST main (06.016.04) INFORMATIVE: Wrote NME file: /var/opt/SIU8/INPUT_HUAWEI_IMS/MDR_BIN/BILL_IS20240502_144233 for scheme MDR.
+05/02/2024 14:42:35.214 EEST main (06.016.04) INFORMATIVE: Wrote NME file: /var/opt/SIU8/INPUT_HUAWEI_IMS/2023/Jul/28/INPUT_HUAWEI_IMS_AuditSrc_09_32GMT for scheme AuditSrc.
+05/02/2024 14:42:35.219 EEST main (06.016.02) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_IMS/BIN/RAW/IS20240502_144141.bin was aged out for scheme RAW.
+05/02/2024 14:42:35.224 EEST main (06.016.02) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_IMS/MDR_BIN/BILL_IS20240502_144141 was aged out for scheme MDR.
+05/02/2024 14:42:35.229 EEST main (06.016.02) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_IMS/2015/Jul/22/INPUT_HUAWEI_IMS_AuditSrc_12_33GMT was aged out for scheme AuditSrc.
+05/02/2024 14:42:35.233 EEST main (07.003.19) INFORMATIVE: Flushed 2 NMEs at a rate of 0 NMEs/sec
+05/02/2024 14:42:35.233 EEST main (47.002.13) INFORMATIVE: Flush of audited dataset 298 complete.
+05/02/2024 14:42:35.234 EEST main (08.025.01) INFORMATIVE: DeleteFile.cleanup(): Deleted file /home/ium/pack1/OFFLINE_MEDIATION/files/cache/IS20240502_144233
+05/02/2024 14:42:35.255 EEST LocalDeliveryAgent (06.050.01) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_IMS/MDR_BIN/BILL_IS20240502_144233 has been sent to /home/ium/pack1/OFFLINE_MEDIATION/ENRICH_MDR/in/BILL_IS20240502_144233 on local directory /home/ium/pack1/OFFLINE_MEDIATION/ENRICH_MDR/in
+05/02/2024 14:42:35.257 EEST LocalDeliveryAgent (06.007.04) INFORMATIVE: DeliveryAgent(LocalDeliveryAgent): Dataset 270 has been delivered. 
+05/02/2024 14:42:40.240 EEST main (08.003.11) INFORMATIVE: Setting next file to: /home/ium/pack1/OFFLINE_MEDIATION/files/IS20240502_144238
+05/02/2024 14:42:40.247 EEST main (07.003.11) INFORMATIVE: Aggregated 1 NMEs at a rate of 0 NMEs/sec
+05/02/2024 14:42:40.248 EEST main (07.002.12) INFORMATIVE: Scheme RAW flushed 1 NMEs
+05/02/2024 14:42:40.248 EEST main (07.018.01) INFORMATIVE: Scheme RAW tree contained 0 nmes, 0 flushed, 0 remain.
+05/02/2024 14:42:40.256 EEST main (07.002.12) INFORMATIVE: Scheme MDR flushed 1 NMEs
+05/02/2024 14:42:40.256 EEST main (07.018.01) INFORMATIVE: Scheme MDR tree contained 0 nmes, 0 flushed, 0 remain.
+05/02/2024 14:42:40.256 EEST main (07.002.12) INFORMATIVE: Scheme ERROR flushed 0 NMEs
+05/02/2024 14:42:40.256 EEST main (07.018.01) INFORMATIVE: Scheme ERROR tree contained 0 nmes, 0 flushed, 0 remain.
+05/02/2024 14:42:40.261 EEST main (06.016.04) INFORMATIVE: Wrote NME file: /var/opt/SIU8/INPUT_HUAWEI_IMS/BIN/RAW/IS20240502_144238.bin for scheme RAW.
+05/02/2024 14:42:40.265 EEST main (06.016.04) INFORMATIVE: Wrote NME file: /var/opt/SIU8/INPUT_HUAWEI_IMS/MDR_BIN/BILL_IS20240502_144238 for scheme MDR.
+05/02/2024 14:42:40.272 EEST main (06.016.04) INFORMATIVE: Wrote NME file: /var/opt/SIU8/INPUT_HUAWEI_IMS/2023/Jul/28/INPUT_HUAWEI_IMS_AuditSrc_09_29GMT for scheme AuditSrc.
+05/02/2024 14:42:40.277 EEST main (06.016.02) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_IMS/BIN/RAW/IS20240502_144145.bin was aged out for scheme RAW.
+05/02/2024 14:42:40.281 EEST main (06.016.02) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_IMS/MDR_BIN/BILL_IS20240502_144145 was aged out for scheme MDR.
+05/02/2024 14:42:40.287 EEST main (06.016.02) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_IMS/2015/Jul/22/INPUT_HUAWEI_IMS_AuditSrc_11_51GMT.1 was aged out for scheme AuditSrc.
+05/02/2024 14:42:40.291 EEST main (07.003.19) INFORMATIVE: Flushed 2 NMEs at a rate of 0 NMEs/sec
+05/02/2024 14:42:40.291 EEST main (47.002.13) INFORMATIVE: Flush of audited dataset 299 complete.
+05/02/2024 14:42:40.292 EEST main (08.025.01) INFORMATIVE: DeleteFile.cleanup(): Deleted file /home/ium/pack1/OFFLINE_MEDIATION/files/cache/IS20240502_144238
+05/02/2024 14:42:40.296 EEST LocalDeliveryAgent (06.050.01) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_IMS/MDR_BIN/BILL_IS20240502_144238 has been sent to /home/ium/pack1/OFFLINE_MEDIATION/ENRICH_MDR/in/BILL_IS20240502_144238 on local directory /home/ium/pack1/OFFLINE_MEDIATION/ENRICH_MDR/in
+05/02/2024 14:42:40.298 EEST LocalDeliveryAgent (06.007.04) INFORMATIVE: DeliveryAgent(LocalDeliveryAgent): Dataset 271 has been delivered. 
+05/02/2024 14:42:45.299 EEST main (08.003.11) INFORMATIVE: Setting next file to: /home/ium/pack1/OFFLINE_MEDIATION/files/IS20240502_144244
+05/02/2024 14:42:45.307 EEST main (07.003.11) INFORMATIVE: Aggregated 1 NMEs at a rate of 0 NMEs/sec
+05/02/2024 14:42:45.307 EEST main (07.002.12) INFORMATIVE: Scheme RAW flushed 1 NMEs
+05/02/2024 14:42:45.307 EEST main (07.018.01) INFORMATIVE: Scheme RAW tree contained 0 nmes, 0 flushed, 0 remain.
+05/02/2024 14:42:45.311 EEST main (07.002.12) INFORMATIVE: Scheme MDR flushed 1 NMEs
+05/02/2024 14:42:45.311 EEST main (07.018.01) INFORMATIVE: Scheme MDR tree contained 0 nmes, 0 flushed, 0 remain.
+05/02/2024 14:42:45.311 EEST main (07.002.12) INFORMATIVE: Scheme ERROR flushed 0 NMEs
+05/02/2024 14:42:45.311 EEST main (07.018.01) INFORMATIVE: Scheme ERROR tree contained 0 nmes, 0 flushed, 0 remain.
+05/02/2024 14:42:45.315 EEST main (06.016.04) INFORMATIVE: Wrote NME file: /var/opt/SIU8/INPUT_HUAWEI_IMS/BIN/RAW/IS20240502_144244.bin for scheme RAW.
+05/02/2024 14:42:45.320 EEST main (06.016.04) INFORMATIVE: Wrote NME file: /var/opt/SIU8/INPUT_HUAWEI_IMS/MDR_BIN/BILL_IS20240502_144244 for scheme MDR.
+05/02/2024 14:42:45.326 EEST main (06.016.04) INFORMATIVE: Wrote NME file: /var/opt/SIU8/INPUT_HUAWEI_IMS/2023/Jul/28/INPUT_HUAWEI_IMS_AuditSrc_09_32GMT.1 for scheme AuditSrc.
+05/02/2024 14:42:45.331 EEST main (06.016.02) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_IMS/BIN/RAW/IS20240502_144154.bin was aged out for scheme RAW.
+05/02/2024 14:42:45.336 EEST main (06.016.02) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_IMS/MDR_BIN/BILL_IS20240502_144154 was aged out for scheme MDR.
+05/02/2024 14:42:45.341 EEST main (06.016.02) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_IMS/2015/Jul/25/INPUT_HUAWEI_IMS_AuditSrc_04_01GMT.1 was aged out for scheme AuditSrc.
+05/02/2024 14:42:45.346 EEST main (07.003.19) INFORMATIVE: Flushed 2 NMEs at a rate of 0 NMEs/sec
+05/02/2024 14:42:45.346 EEST main (47.002.13) INFORMATIVE: Flush of audited dataset 300 complete.
+05/02/2024 14:42:45.347 EEST main (08.025.01) INFORMATIVE: DeleteFile.cleanup(): Deleted file /home/ium/pack1/OFFLINE_MEDIATION/files/cache/IS20240502_144244
+05/02/2024 14:42:45.351 EEST LocalDeliveryAgent (06.050.01) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_IMS/MDR_BIN/BILL_IS20240502_144244 has been sent to /home/ium/pack1/OFFLINE_MEDIATION/ENRICH_MDR/in/BILL_IS20240502_144244 on local directory /home/ium/pack1/OFFLINE_MEDIATION/ENRICH_MDR/in
+05/02/2024 14:42:45.353 EEST LocalDeliveryAgent (06.007.04) INFORMATIVE: DeliveryAgent(LocalDeliveryAgent): Dataset 272 has been delivered. 
+05/02/2024 14:42:50.353 EEST main (08.003.11) INFORMATIVE: Setting next file to: /home/ium/pack1/OFFLINE_MEDIATION/files/IS20240502_144247
+05/02/2024 14:42:50.361 EEST main (07.003.11) INFORMATIVE: Aggregated 1 NMEs at a rate of 0 NMEs/sec
+05/02/2024 14:42:50.361 EEST main (07.002.12) INFORMATIVE: Scheme RAW flushed 1 NMEs
+05/02/2024 14:42:50.361 EEST main (07.018.01) INFORMATIVE: Scheme RAW tree contained 0 nmes, 0 flushed, 0 remain.
+05/02/2024 14:42:50.365 EEST main (07.002.12) INFORMATIVE: Scheme MDR flushed 1 NMEs
+05/02/2024 14:42:50.365 EEST main (07.018.01) INFORMATIVE: Scheme MDR tree contained 0 nmes, 0 flushed, 0 remain.
+05/02/2024 14:42:50.366 EEST main (07.002.12) INFORMATIVE: Scheme ERROR flushed 0 NMEs
+05/02/2024 14:42:50.366 EEST main (07.018.01) INFORMATIVE: Scheme ERROR tree contained 0 nmes, 0 flushed, 0 remain.
+05/02/2024 14:42:50.370 EEST main (06.016.04) INFORMATIVE: Wrote NME file: /var/opt/SIU8/INPUT_HUAWEI_IMS/BIN/RAW/IS20240502_144247.bin for scheme RAW.
+05/02/2024 14:42:50.375 EEST main (06.016.04) INFORMATIVE: Wrote NME file: /var/opt/SIU8/INPUT_HUAWEI_IMS/MDR_BIN/BILL_IS20240502_144247 for scheme MDR.
+05/02/2024 14:42:50.382 EEST main (06.016.04) INFORMATIVE: Wrote NME file: /var/opt/SIU8/INPUT_HUAWEI_IMS/2015/Jul/25/INPUT_HUAWEI_IMS_AuditSrc_05_09GMT for scheme AuditSrc.
+05/02/2024 14:42:50.388 EEST main (06.016.02) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_IMS/BIN/RAW/IS20240502_144158.bin was aged out for scheme RAW.
+05/02/2024 14:42:50.393 EEST main (06.016.02) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_IMS/MDR_BIN/BILL_IS20240502_144158 was aged out for scheme MDR.
+05/02/2024 14:42:50.398 EEST main (06.016.02) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_IMS/2015/Jul/24/INPUT_HUAWEI_IMS_AuditSrc_09_58GMT.1 was aged out for scheme AuditSrc.
+05/02/2024 14:42:50.402 EEST main (07.003.19) INFORMATIVE: Flushed 2 NMEs at a rate of 0 NMEs/sec
+05/02/2024 14:42:50.402 EEST main (47.002.13) INFORMATIVE: Flush of audited dataset 301 complete.
+05/02/2024 14:42:50.403 EEST main (08.025.01) INFORMATIVE: DeleteFile.cleanup(): Deleted file /home/ium/pack1/OFFLINE_MEDIATION/files/cache/IS20240502_144247
+05/02/2024 14:42:50.407 EEST LocalDeliveryAgent (06.050.01) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_IMS/MDR_BIN/BILL_IS20240502_144247 has been sent to /home/ium/pack1/OFFLINE_MEDIATION/ENRICH_MDR/in/BILL_IS20240502_144247 on local directory /home/ium/pack1/OFFLINE_MEDIATION/ENRICH_MDR/in
+05/02/2024 14:42:50.410 EEST LocalDeliveryAgent (06.007.04) INFORMATIVE: DeliveryAgent(LocalDeliveryAgent): Dataset 273 has been delivered. 
+05/02/2024 14:42:55.409 EEST main (08.003.11) INFORMATIVE: Setting next file to: /home/ium/pack1/OFFLINE_MEDIATION/files/IS20240502_144251
+05/02/2024 14:42:55.420 EEST main (07.003.11) INFORMATIVE: Aggregated 1 NMEs at a rate of 0 NMEs/sec
+05/02/2024 14:42:55.420 EEST main (07.002.12) INFORMATIVE: Scheme RAW flushed 1 NMEs
+05/02/2024 14:42:55.420 EEST main (07.018.01) INFORMATIVE: Scheme RAW tree contained 0 nmes, 0 flushed, 0 remain.
+05/02/2024 14:42:55.428 EEST main (07.002.12) INFORMATIVE: Scheme MDR flushed 1 NMEs
+05/02/2024 14:42:55.428 EEST main (07.018.01) INFORMATIVE: Scheme MDR tree contained 0 nmes, 0 flushed, 0 remain.
+05/02/2024 14:42:55.428 EEST main (07.002.12) INFORMATIVE: Scheme ERROR flushed 0 NMEs
+05/02/2024 14:42:55.428 EEST main (07.018.01) INFORMATIVE: Scheme ERROR tree contained 0 nmes, 0 flushed, 0 remain.
+05/02/2024 14:42:55.433 EEST main (06.016.04) INFORMATIVE: Wrote NME file: /var/opt/SIU8/INPUT_HUAWEI_IMS/BIN/RAW/IS20240502_144251.bin for scheme RAW.
+05/02/2024 14:42:55.438 EEST main (06.016.04) INFORMATIVE: Wrote NME file: /var/opt/SIU8/INPUT_HUAWEI_IMS/MDR_BIN/BILL_IS20240502_144251 for scheme MDR.
+05/02/2024 14:42:55.446 EEST main (06.016.04) INFORMATIVE: Wrote NME file: /var/opt/SIU8/INPUT_HUAWEI_IMS/2015/Jul/24/INPUT_HUAWEI_IMS_AuditSrc_05_42GMT for scheme AuditSrc.
+05/02/2024 14:42:55.451 EEST main (06.016.02) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_IMS/BIN/RAW/IS20240502_144201.bin was aged out for scheme RAW.
+05/02/2024 14:42:55.456 EEST main (06.016.02) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_IMS/MDR_BIN/BILL_IS20240502_144201 was aged out for scheme MDR.
+05/02/2024 14:42:55.461 EEST main (06.016.02) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_IMS/2015/Jul/22/INPUT_HUAWEI_IMS_AuditSrc_11_51GMT.2 was aged out for scheme AuditSrc.
+05/02/2024 14:42:55.465 EEST main (07.003.19) INFORMATIVE: Flushed 2 NMEs at a rate of 0 NMEs/sec
+05/02/2024 14:42:55.465 EEST main (47.002.13) INFORMATIVE: Flush of audited dataset 302 complete.
+05/02/2024 14:42:55.465 EEST main (08.025.01) INFORMATIVE: DeleteFile.cleanup(): Deleted file /home/ium/pack1/OFFLINE_MEDIATION/files/cache/IS20240502_144251
+05/02/2024 14:42:55.470 EEST LocalDeliveryAgent (06.050.01) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_IMS/MDR_BIN/BILL_IS20240502_144251 has been sent to /home/ium/pack1/OFFLINE_MEDIATION/ENRICH_MDR/in/BILL_IS20240502_144251 on local directory /home/ium/pack1/OFFLINE_MEDIATION/ENRICH_MDR/in
+05/02/2024 14:42:55.472 EEST LocalDeliveryAgent (06.007.04) INFORMATIVE: DeliveryAgent(LocalDeliveryAgent): Dataset 274 has been delivered. 
+05/02/2024 14:43:00.471 EEST main (08.003.11) INFORMATIVE: Setting next file to: /home/ium/pack1/OFFLINE_MEDIATION/files/IS20240502_144259
+05/02/2024 14:43:00.478 EEST main (07.003.11) INFORMATIVE: Aggregated 1 NMEs at a rate of 0 NMEs/sec
+05/02/2024 14:43:00.478 EEST main (07.002.12) INFORMATIVE: Scheme RAW flushed 1 NMEs
+05/02/2024 14:43:00.478 EEST main (07.018.01) INFORMATIVE: Scheme RAW tree contained 0 nmes, 0 flushed, 0 remain.
+05/02/2024 14:43:00.482 EEST main (07.002.12) INFORMATIVE: Scheme MDR flushed 1 NMEs
+05/02/2024 14:43:00.482 EEST main (07.018.01) INFORMATIVE: Scheme MDR tree contained 0 nmes, 0 flushed, 0 remain.
+05/02/2024 14:43:00.483 EEST main (07.002.12) INFORMATIVE: Scheme ERROR flushed 0 NMEs
+05/02/2024 14:43:00.483 EEST main (07.018.01) INFORMATIVE: Scheme ERROR tree contained 0 nmes, 0 flushed, 0 remain.
+05/02/2024 14:43:00.488 EEST main (06.016.04) INFORMATIVE: Wrote NME file: /var/opt/SIU8/INPUT_HUAWEI_IMS/BIN/RAW/IS20240502_144259.bin for scheme RAW.
+05/02/2024 14:43:00.493 EEST main (06.016.04) INFORMATIVE: Wrote NME file: /var/opt/SIU8/INPUT_HUAWEI_IMS/MDR_BIN/BILL_IS20240502_144259 for scheme MDR.
+05/02/2024 14:43:00.499 EEST main (06.016.04) INFORMATIVE: Wrote NME file: /var/opt/SIU8/INPUT_HUAWEI_IMS/2023/Aug/17/INPUT_HUAWEI_IMS_AuditSrc_07_58GMT for scheme AuditSrc.
+05/02/2024 14:43:00.505 EEST main (06.016.02) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_IMS/BIN/RAW/IS20240502_144205.bin was aged out for scheme RAW.
+05/02/2024 14:43:00.510 EEST main (06.016.02) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_IMS/MDR_BIN/BILL_IS20240502_144205 was aged out for scheme MDR.
+05/02/2024 14:43:00.515 EEST main (06.016.02) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_IMS/2015/Jul/22/INPUT_HUAWEI_IMS_AuditSrc_11_18GMT.1 was aged out for scheme AuditSrc.
+05/02/2024 14:43:00.519 EEST main (07.003.19) INFORMATIVE: Flushed 2 NMEs at a rate of 0 NMEs/sec
+05/02/2024 14:43:00.519 EEST main (47.002.13) INFORMATIVE: Flush of audited dataset 303 complete.
+05/02/2024 14:43:00.520 EEST main (08.025.01) INFORMATIVE: DeleteFile.cleanup(): Deleted file /home/ium/pack1/OFFLINE_MEDIATION/files/cache/IS20240502_144259
+05/02/2024 14:43:00.524 EEST LocalDeliveryAgent (06.050.01) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_IMS/MDR_BIN/BILL_IS20240502_144259 has been sent to /home/ium/pack1/OFFLINE_MEDIATION/ENRICH_MDR/in/BILL_IS20240502_144259 on local directory /home/ium/pack1/OFFLINE_MEDIATION/ENRICH_MDR/in
+05/02/2024 14:43:00.526 EEST LocalDeliveryAgent (06.007.04) INFORMATIVE: DeliveryAgent(LocalDeliveryAgent): Dataset 275 has been delivered. 
+05/02/2024 14:43:05.526 EEST main (08.003.11) INFORMATIVE: Setting next file to: /home/ium/pack1/OFFLINE_MEDIATION/files/IS20240502_144303
+05/02/2024 14:43:05.534 EEST main (07.003.11) INFORMATIVE: Aggregated 1 NMEs at a rate of 0 NMEs/sec
+05/02/2024 14:43:05.534 EEST main (07.002.12) INFORMATIVE: Scheme RAW flushed 1 NMEs
+05/02/2024 14:43:05.534 EEST main (07.018.01) INFORMATIVE: Scheme RAW tree contained 0 nmes, 0 flushed, 0 remain.
+05/02/2024 14:43:05.539 EEST main (07.002.12) INFORMATIVE: Scheme MDR flushed 1 NMEs
+05/02/2024 14:43:05.539 EEST main (07.018.01) INFORMATIVE: Scheme MDR tree contained 0 nmes, 0 flushed, 0 remain.
+05/02/2024 14:43:05.539 EEST main (07.002.12) INFORMATIVE: Scheme ERROR flushed 0 NMEs
+05/02/2024 14:43:05.539 EEST main (07.018.01) INFORMATIVE: Scheme ERROR tree contained 0 nmes, 0 flushed, 0 remain.
+05/02/2024 14:43:05.544 EEST main (06.016.04) INFORMATIVE: Wrote NME file: /var/opt/SIU8/INPUT_HUAWEI_IMS/BIN/RAW/IS20240502_144303.bin for scheme RAW.
+05/02/2024 14:43:05.549 EEST main (06.016.04) INFORMATIVE: Wrote NME file: /var/opt/SIU8/INPUT_HUAWEI_IMS/MDR_BIN/BILL_IS20240502_144303 for scheme MDR.
+05/02/2024 14:43:05.555 EEST main (06.016.04) INFORMATIVE: Wrote NME file: /var/opt/SIU8/INPUT_HUAWEI_IMS/2015/Jul/24/INPUT_HUAWEI_IMS_AuditSrc_09_58GMT for scheme AuditSrc.
+05/02/2024 14:43:05.560 EEST main (06.016.02) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_IMS/BIN/RAW/IS20240502_144212.bin was aged out for scheme RAW.
+05/02/2024 14:43:05.565 EEST main (06.016.02) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_IMS/MDR_BIN/BILL_IS20240502_144212 was aged out for scheme MDR.
+05/02/2024 14:43:05.570 EEST main (06.016.02) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_IMS/2015/Jul/22/INPUT_HUAWEI_IMS_AuditSrc_12_33GMT.1 was aged out for scheme AuditSrc.
+05/02/2024 14:43:05.574 EEST main (07.003.19) INFORMATIVE: Flushed 2 NMEs at a rate of 0 NMEs/sec
+05/02/2024 14:43:05.575 EEST main (47.002.13) INFORMATIVE: Flush of audited dataset 304 complete.
+05/02/2024 14:43:05.575 EEST main (08.025.01) INFORMATIVE: DeleteFile.cleanup(): Deleted file /home/ium/pack1/OFFLINE_MEDIATION/files/cache/IS20240502_144303
+05/02/2024 14:43:05.579 EEST LocalDeliveryAgent (06.050.01) INFORMATIVE: File /var/opt/SIU8/INPUT_HUAWEI_IMS/MDR_BIN/BILL_IS20240502_144303 has been sent to /home/ium/pack1/OFFLINE_MEDIATION/ENRICH_MDR/in/BILL_IS20240502_144303 on local directory /home/ium/pack1/OFFLINE_MEDIATION/ENRICH_MDR/in
+05/02/2024 14:43:05.581 EEST LocalDeliveryAgent (06.007.04) INFORMATIVE: DeliveryAgent(LocalDeliveryAgent): Dataset 276 has been delivered. 
+05/02/2024 15:57:42.584 EEST RequestProcessor-5 (03.002.01) ACCOUNTING: Stop Collector
+05/02/2024 15:57:42.605 EEST RequestProcessor-5 (02.015.01) ACCOUNTING: Received Stop Request.
+05/02/2024 15:57:42.606 EEST main (06.016.06) WARNING: FileJDBCDatastore is aborting the current transaction.
+05/02/2024 15:57:42.633 EEST main (06.016.06) WARNING: FileJDBCDatastore is aborting the current transaction.
+05/02/2024 15:57:42.633 EEST main (06.016.06) WARNING: FileJDBCDatastore is aborting the current transaction.
+05/02/2024 15:57:42.633 EEST main (06.016.06) WARNING: FileJDBCDatastore is aborting the current transaction.
+05/02/2024 15:57:42.634 EEST main (08.036.02) INFORMATIVE: End of Input Data.  Collection Terminated.
+05/02/2024 15:57:42.634 EEST main (178.007.03) INFORMATIVE: stop service registry
+05/02/2024 15:57:42.638 EEST main (178.007.04) INFORMATIVE: destroy service registry
+05/02/2024 15:57:47.638 EEST main (03.003.25) ACCOUNTING: Collector INPUT_HUAWEI_IMS shutting down.
+05/02/2024 15:57:47.639 EEST Thread-1 (02.010.24) ACCOUNTING: Process INPUT_HUAWEI_IMS(4738) Exiting By Request.
+05/02/2024 20:43:46.214 EEST main (02.021.01) INFORMATIVE: ==== INPUT_HUAWEI_IMS Starting ==== 
+05/02/2024 20:43:46.216 EEST main (02.021.02) INFORMATIVE: Operating System Name: Linux
+05/02/2024 20:43:46.216 EEST main (02.021.03) INFORMATIVE: Operating System Version: 3.10.0-693.el7.x86_64
+05/02/2024 20:43:46.216 EEST main (02.021.04) INFORMATIVE: Operating System Architecture: amd64
+05/02/2024 20:43:46.216 EEST main (02.021.05) INFORMATIVE: SIU Version: B.08.03 FP01 2016/03/31
+05/02/2024 20:43:46.216 EEST main (02.021.06) INFORMATIVE: Java Version: 1.8.0_171
+05/02/2024 20:43:46.217 EEST main (02.021.07) INFORMATIVE: Java Home: /opt/jdk1.8.0_171/jre
+05/02/2024 20:43:46.217 EEST main (02.021.08) INFORMATIVE: Class Path: /opt/SIU8/lib/3rdparty/jailbreak.jar:/opt/SIU8/lib/3rdparty/nmegzip.jar:/opt/SIU8/lib/3rdparty/ojdbc8-19.19.0.0.jar:/opt/SIU8/lib/3rdparty/ucp-19.19.0.0.jar:/opt/SIU8/lib/3rdparty/jsch-0.1.55.jar:/opt/SIU8/lib/patches:/opt/SIU8/lib/transaction-api.jar:/opt/SIU8/lib/security-client-webmodel.jar:/opt/SIU8/lib/security-client-web.jar:/opt/SIU8/lib/security-core.jar:/opt/SIU8/lib/security-auth.jar:/opt/SIU8/lib/security-jmx.jar:/opt/SIU8/lib/security-corba.jar:/opt/SIU8/lib/security-client.jar:/opt/SIU8/lib/console-core.jar:/opt/SIU8/lib/console-spring.jar:/opt/SIU8/lib/remoting-api.jar:/opt/SIU8/lib/remoting-corba.jar:/opt/SIU8/lib/remoting-registry.jar:/opt/SIU8/lib/remoting-service.jar:/opt/SIU8/lib/filemgr-api.jar:/opt/SIU8/lib/filemgr-ftp.jar:/opt/SIU8/lib/datastruct-api.jar:/opt/SIU8/lib/datastruct-compiler.jar:/opt/SIU8/lib/datastruct-asm.jar:/opt/SIU8/lib/datastruct-validation.jar:/opt/SIU8/lib/datastruct-array.jar:/opt/SIU8/lib/repository-client.jar:/opt/SIU8/lib/siulogging-i18n.jar:/opt/SIU8/lib/siulogging.jar:/opt/SIU8/lib/siulogging-utils.jar:/opt/SIU8/lib/siulogging-slf4j.jar:/opt/SIU8/lib/siulogging-jcl.jar:/opt/SIU8/lib/siuloader.jar:/opt/SIU8/lib/siuutils.jar:/opt/SIU8/lib/siucolls.jar:/opt/SIU8/lib/siuaudit.jar:/opt/SIU8/lib/siucfg.jar:/opt/SIU8/lib/siugui.jar:/opt/SIU8/lib/siutools.jar:/opt/SIU8/lib/siuagent.jar:/opt/SIU8/lib/siumanagement.jar:/opt/SIU8/lib/siudiag.jar:/opt/SIU8/lib/siusession.jar:/opt/SIU8/lib/mysqlDriver.jar:/opt/SIU8/lib/Federation.jar:/opt/SIU8/lib/commons-io.jar:/opt/SIU8/lib/commons-collections.jar:/opt/SIU8/lib/commons-net.jar:/opt/SIU8/lib/jakarta-oro.jar:/opt/SIU8/lib/jakarta-regexp.jar:/opt/SIU8/lib/xercesImpl.jar:/opt/SIU8/lib/serializer.jar:/opt/SIU8/lib/jdom.jar:/opt/SIU8/lib/xalan.jar:/opt/SIU8/lib/castor.jar:/opt/SIU8/lib/netgraph.jar:/opt/SIU8/lib/AdventNetSnmp.jar:/opt/SIU8/lib/JimiProClasses.zip:/opt/SIU8/lib/ipdr.jar:/opt/SIU8/lib/commons-cli.jar:/opt/SIU8/lib/jline.jar:/opt/SIU8/lib/wizard.jar:/opt/SIU8/lib/bcprov-jdk16.jar:/opt/SIU8/lib/jacorb.jar:/opt/SIU8/lib/jacorb-services.jar:/opt/SIU8/lib/picocontainer.jar:/opt/SIU8/lib/wrapper.jar:/opt/SIU8/lib/antlr.jar:/opt/SIU8/lib/cglib.jar:/opt/SIU8/lib/slf4j-api.jar:/opt/SIU8/lib/commons-logging-api.jar:/opt/SIU8/lib/spring-core.jar:/opt/SIU8/lib/spring-beans.jar:/opt/SIU8/lib/spring-context.jar:/opt/SIU8/lib/mvel2.jar:/opt/SIU8/lib/groovy.jar:/opt/SIU8/lib/netty.jar:/opt/SIU8/lib/asm.jar:/opt/SIU8/lib/stringtemplate.jar:/opt/SIU8/lib/jcr-2.0.jar:/opt/SIU8/lib/diff-utils.jar:/opt/SIU8/lib/iumwebapputils.jar:/opt/SIU8/lib/jsch.jar:/opt/SIU8/lib/3rdparty:.
+05/02/2024 20:43:46.217 EEST main (02.021.09) INFORMATIVE: User: ium
+05/02/2024 20:43:46.217 EEST main (02.021.10) INFORMATIVE: PID: 31394
+05/02/2024 20:43:46.217 EEST main (02.021.11) INFORMATIVE: PWD: /var/opt/SIU8
+05/02/2024 20:43:46.217 EEST main (02.021.12) INFORMATIVE: Timezone: Europe/Kiev
+05/02/2024 20:43:46.217 EEST main (02.021.13) INFORMATIVE: BINROOT: /opt/SIU8
+05/02/2024 20:43:46.217 EEST main (02.021.14) INFORMATIVE: VARROOT: /var/opt/SIU8
+05/02/2024 20:43:46.217 EEST main (02.021.15) INFORMATIVE: CFGROOT: /etc/opt/SIU8
+05/02/2024 20:43:46.230 EEST main (02.021.17) INFORMATIVE: Patch Name is: /opt/SIU8/lib/3rdparty/jailbreak.jar
+05/02/2024 20:43:46.230 EEST main (02.007.03) INFORMATIVE: * Build ID: patch eIUM83FP01.20160331-1821
+05/02/2024 20:43:46.231 EEST main (02.007.04) INFORMATIVE: * Creation Date: 2016-03-31 16:23:43 GMT
+05/02/2024 20:43:46.231 EEST main (02.007.05) INFORMATIVE: * IUM Release: B.08.03 FP01 2016/03/31
+05/02/2024 20:43:46.231 EEST main (02.021.17) INFORMATIVE: Patch Name is: /opt/SIU8/lib/3rdparty/nmegzip.jar
+05/02/2024 20:43:46.231 EEST main (02.007.03) INFORMATIVE: * Build ID: patch eIUM83FP01.20160331-1821
+05/02/2024 20:43:46.231 EEST main (02.007.04) INFORMATIVE: * Creation Date: 2016-03-31 16:23:43 GMT
+05/02/2024 20:43:46.231 EEST main (02.007.05) INFORMATIVE: * IUM Release: B.08.03 FP01 2016/03/31
+05/02/2024 20:43:46.231 EEST main (02.021.17) INFORMATIVE: Patch Name is: /opt/SIU8/lib/security-client-web.jar
+05/02/2024 20:43:46.231 EEST main (02.007.03) INFORMATIVE: * Build ID: patch eIUM83FP01.20160331-1821
+05/02/2024 20:43:46.231 EEST main (02.007.04) INFORMATIVE: * Creation Date: 2016-03-31 18:23:07 CEST
+05/02/2024 20:43:46.231 EEST main (02.007.05) INFORMATIVE: * IUM Release: B.08.03 FP01 2016/03/31
+05/02/2024 20:43:46.232 EEST main (02.021.17) INFORMATIVE: Patch Name is: /opt/SIU8/lib/security-core.jar
+05/02/2024 20:43:46.232 EEST main (02.007.03) INFORMATIVE: * Build ID: patch eIUM83FP01.20160331-1821
+05/02/2024 20:43:46.232 EEST main (02.007.04) INFORMATIVE: * Creation Date: 2016-03-31 18:23:05 CEST
+05/02/2024 20:43:46.232 EEST main (02.007.05) INFORMATIVE: * IUM Release: B.08.03 FP01 2016/03/31
+05/02/2024 20:43:46.232 EEST main (02.021.17) INFORMATIVE: Patch Name is: /opt/SIU8/lib/security-client.jar
+05/02/2024 20:43:46.232 EEST main (02.007.03) INFORMATIVE: * Build ID: patch eIUM83FP01Patch.20190603-1719
+05/02/2024 20:43:46.232 EEST main (02.007.04) INFORMATIVE: * Creation Date: 2019-06-03 17:21:25 CEST
+05/02/2024 20:43:46.232 EEST main (02.007.05) INFORMATIVE: * IUM Release: B.08.03 FP01 2016/03/31
+05/02/2024 20:43:46.232 EEST main (02.021.17) INFORMATIVE: Patch Name is: /opt/SIU8/lib/console-core.jar
+05/02/2024 20:43:46.232 EEST main (02.007.03) INFORMATIVE: * Build ID: patch eIUM83FP01.20160331-1821
+05/02/2024 20:43:46.233 EEST main (02.007.04) INFORMATIVE: * Creation Date: 2016-03-31 18:23:11 CEST
+05/02/2024 20:43:46.233 EEST main (02.007.05) INFORMATIVE: * IUM Release: B.08.03 FP01 2016/03/31
+05/02/2024 20:43:46.233 EEST main (02.021.17) INFORMATIVE: Patch Name is: /opt/SIU8/lib/console-spring.jar
+05/02/2024 20:43:46.233 EEST main (02.007.03) INFORMATIVE: * Build ID: patch eIUM83FP01.20160331-1821
+05/02/2024 20:43:46.233 EEST main (02.007.04) INFORMATIVE: * Creation Date: 2016-03-31 18:23:11 CEST
+05/02/2024 20:43:46.233 EEST main (02.007.05) INFORMATIVE: * IUM Release: B.08.03 FP01 2016/03/31
+05/02/2024 20:43:46.233 EEST main (02.021.17) INFORMATIVE: Patch Name is: /opt/SIU8/lib/remoting-corba.jar
+05/02/2024 20:43:46.233 EEST main (02.007.03) INFORMATIVE: * Build ID: patch eIUM83FP01Patch.20190603-1719
+05/02/2024 20:43:46.233 EEST main (02.007.04) INFORMATIVE: * Creation Date: 2019-06-03 17:21:29 CEST
+05/02/2024 20:43:46.233 EEST main (02.007.05) INFORMATIVE: * IUM Release: B.08.03 FP01 2016/03/31
+05/02/2024 20:43:46.234 EEST main (02.021.17) INFORMATIVE: Patch Name is: /opt/SIU8/lib/remoting-registry.jar

@@ -4,7 +4,7 @@ import os
 import shutil
 from typing import Tuple, Set
 
-from PIL import Image
+from PIL import Image  # type: ignore
 
 
 class ProcessImage:
@@ -26,29 +26,38 @@ class ProcessImage:
 
     def resize_image(self, image_name: str, output_folder: str,
                      new_size: Tuple[int, int]) -> int:
-        """
-        Resizes a single image and saves it to the output folder.
+        """Resizes a single image, ensuring only one process handles it at a
+        time."""
+        image_path = os.path.join(self.image_dir, image_name)
+        lock_path = image_path + ".lock"
 
-        :param image_name: Name of the image file to resize.
-        :param output_folder: Directory where the resized image will be saved.
-        :param new_size: Target dimensions (width, height) for resizing.
-        :return: The process ID (PID) of the worker handling the image.
-        """
+        if os.path.exists(lock_path):
+            print(
+                f"[PID {os.getpid()}] {image_name} is already being "
+                f"processed. Skipping...")
+            return os.getpid()
+
+        # Create lock file
+        with open(lock_path, "w", encoding="utf-8"):
+            pass
+
         print(f"[PID {os.getpid()}] Processing: {image_name}")
-
-        # Ensure output directory exists
         os.makedirs(output_folder, exist_ok=True)
 
-        if image_name.lower().endswith(("png", "jpg", "jpeg")):
-            try:
-                image_path = os.path.join(self.image_dir, image_name)
-                image = Image.open(image_path)
-                image = image.resize(new_size)
-                image.save(os.path.join(output_folder, image_name))
-                os.remove(image_path)  # Remove original image after processing
-            except Exception as error:
-                print(f"Error processing {image_name}: {error}")
-
+        try:
+            image = Image.open(image_path)
+            image = image.resize(new_size)
+            image.save(os.path.join(output_folder, image_name))
+            os.remove(image_path)  # Remove original image after processing
+        except FileNotFoundError:
+            print(f"File {image_name} not found. Skipping...")
+        except OSError as error:
+            print(f"OS error processing {image_name}: {error}")
+        except Exception as error:
+            print(f"Unexpected error: {error}")
+            raise
+        finally:
+            os.remove(lock_path)
         return os.getpid()
 
     def resize_images_in_folder(self, output_folder: str,

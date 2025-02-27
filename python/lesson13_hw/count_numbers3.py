@@ -15,7 +15,7 @@ def divide_array(arr_to_divide: List) -> List:
     for i in range(parts):
         start = i * part_len
         stop = (
-                           i + 1) * part_len if i != parts - 1 else arr_len
+                       i + 1) * part_len if i != parts - 1 else arr_len
         # Last chunk gets remainder
         divided_arrays.append(arr_to_divide[start:stop])
 
@@ -27,13 +27,20 @@ def get_sum_array(array_inp: List) -> int:
     return sum(array_inp)
 
 
-if __name__ == '__main__':
-    arr = list(range(1011000))
-    arrays = divide_array(arr)
+def get_count_arrays_parts(array_inp: List) -> int:
+    """Computes the number of arrays divided by the number of CPU cores."""
+    arrays = divide_array(array_inp)
     with mp.Pool() as pool:
         results = pool.map(get_sum_array, arrays)
 
-    for result in results:
-        print(result)
+    for res in results:
+        print(res)
 
-    print(f"Sum of all arrays: {sum(results)}")
+    return sum(results)
+
+
+if __name__ == '__main__':
+    arr = list(range(1011000))
+
+    result = get_count_arrays_parts(arr)
+    print(f"Sum of array: {result}")

@@ -72,7 +72,7 @@ class ProcessImage:
                   img.lower().endswith(("png", "jpg", "jpeg"))]
 
         # Process images using multiple processes
-        with concurrent.futures.ProcessPoolExecutor() as executor:
+        with concurrent.futures.ProcessPoolExecutor(max_workers=6) as executor:
             results = executor.map(self.resize_image, images,
                                    [output_folder] * len(images),
                                    [new_size] * len(images))

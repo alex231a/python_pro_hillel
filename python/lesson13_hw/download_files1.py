@@ -1,7 +1,8 @@
 """Module with function download_file"""
-import os
+# import os
 import threading
 import uuid
+from pathlib import Path
 
 import requests
 
@@ -9,11 +10,12 @@ import requests
 def download_file(url_inp: str) -> None:
     """Function to download file from url"""
     # Ensure downloads directory exists
-    os.makedirs("downloads", exist_ok=True)
+    downloads_dir = Path("downloads")
+    downloads_dir.mkdir(exist_ok=True)
 
     # Generate a unique filename
-    filename = f"{uuid.uuid4()}_{os.path.basename(url_inp)}"
-    file_path = os.path.join("downloads", filename)
+    filename = f"{uuid.uuid4()}_{Path(url).name}"
+    file_path = downloads_dir / filename
 
     print(f"{threading.current_thread().name}. Start downloading {filename}")
 

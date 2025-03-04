@@ -1,0 +1,39 @@
+Results:
+
+Synchronize approach: 469.31 seconds
+Thread approach: 10.23 seconds
+Multiprocess approach: 21.18 seconds
+Async approach: 4.28 seconds
+
+Синхронний підхід – найповільніший, бо кожен запит виконується по черзі.
+Багатопотоковий підхід – значно швидший, бо потоки можуть працювати паралельно (але залежить від GIL).
+Багатопроцесорний підхід – часто повільніший за багатопотоковий, бо створення процесів затратне.
+Асинхронний підхід – найефективніший для I/O-операцій (як запити до API).
+
+
+Як можна інтегрувати асинхронний код у вже існуючий синхронний проект на Python?
+
+1. asyncio.run() – якщо потрібно виконати одну асинхронну функцію у синхронному коді.
+asyncio.run(async_function())
+
+2. Через thead:
+def run_async_function():
+    asyncio.run(async_function())
+
+Thread(target=run_async_function).start()
+
+3. Через loop.run_until_complete()
+loop = asyncio.get_event_loop()
+loop.run_until_complete(async_function())
+
+
+Які підводні камені використання асинхронних бібліотек при роботі з базами даних?
+
+Потрібно використовувати асинхронні бібліотеки (aiosqlite, asyncpg, aiomysql).
+Синхронні (sqlite3, psycopg2, MySQLdb) будуть блокувати роботу.
+
+У асинхронних бібліотеках (asyncpg, aiomysql) потрібно використовувати пул (pool.acquire()),
+щоб уникнути створення нового з'єднання при кожному запиті.
+
+Асинхронна транзакційність - asyncpg підтримує async with connection.transaction(),
+але деякі ORM (наприклад, SQLAlchemy) мають обмеження у async режимі.

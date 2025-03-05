@@ -22,54 +22,73 @@ REQUESTS_COUNT = 500
 # Sync method
 def sync_requests():
     """Function that sends requests in synchronous mode"""
-    start = time.time()
+    start = time.perf_counter()
     for _ in range(REQUESTS_COUNT):
-        requests.get(URL, timeout=5)
-    print(f"Synchronize approach: {time.time() - start:.2f} seconds")
+        try:
+            requests.get(URL, timeout=5)
+        except requests.RequestException as error:
+            print(f"Sync request error: {error}")
+    print(f"Synchronize approach: {time.perf_counter() - start:.2f} seconds")
 
 
 # Thread method
 def thread_request(_):
     """Function that sends request in thread mode"""
-    return requests.get(URL, timeout=5)
+    try:
+        return requests.get(URL, timeout=5)
+    except requests.RequestException as error:
+        print(f"Thread request error: {error}")
+        return None
 
 
 def threaded_requests():
     """Function that sends requests in thread mode and count time"""
-    start = time.time()
+    start = time.perf_counter()
     with ThreadPoolExecutor(max_workers=50) as executor:
-        executor.map(thread_request, range(REQUESTS_COUNT))
-    print(f"Thread approach: {time.time() - start:.2f} seconds")
+        list(executor.map(thread_request, range(REQUESTS_COUNT)))
+    print(f"Thread approach: {time.perf_counter() - start:.2f} seconds")
 
 
 # Multiprocess method
 def process_request(_):
     """Function that sends request in multiprocess mode"""
-    return requests.get(URL, timeout=5)
+    try:
+        return requests.get(URL, timeout=5)
+    except requests.RequestException as error:
+        print(f"Process request error: {error}")
+        return None
 
 
 def process_requests():
     """Function that sends requests in multiprocess mode and count time"""
-    start = time.time()
+    start = time.perf_counter()
     with ProcessPoolExecutor(max_workers=50) as executor:
-        executor.map(process_request, range(REQUESTS_COUNT))
-    print(f"Multiprocess approach: {time.time() - start:.2f} seconds")
+        list(executor.map(process_request, range(REQUESTS_COUNT)))
+    print(f"Multiprocess approach: {time.perf_counter() - start:.2f} seconds")
 
 
 # Async method
 async def async_request(session):
     """Function that sends request in asynchronous mode"""
-    async with session.get(URL) as response:
-        return await response.text()
+    try:
+        async with session.get(URL, timeout=10) as response:
+            return await response.text()
+    except aiohttp.ClientError as error:
+        print(f"Async request error: {error}")
+        return None
+    except asyncio.TimeoutError:
+        print("Async request timeout")
+        return None
 
 
 async def async_requests():
     """Function that sends requests in asynchronous mode and count time"""
-    start = time.time()
+    loop = asyncio.get_event_loop()
+    start = loop.time()
     async with aiohttp.ClientSession() as session:
         tasks = [async_request(session) for _ in range(REQUESTS_COUNT)]
-        await asyncio.gather(*tasks)
-    print(f"Async approach: {time.time() - start:.2f} seconds")
+        await asyncio.gather(*tasks, return_exceptions=True)
+    print(f"Async approach: {loop.time() - start:.2f} seconds")
 
 
 if __name__ == "__main__":

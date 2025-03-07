@@ -1,10 +1,14 @@
 """Module with function that analyses csv file and returns statistics"""
+import re
+from collections import Counter
+
 import pandas as pd
 
 
 def load_csv(file_name: str) -> pd.DataFrame:
     """
-    Loads a CSV file into a Pandas DataFrame, ensuring it contains a 'date' column.
+    Loads a CSV file into a Pandas DataFrame, ensuring it contains a 'date'
+    column.
 
     :param file_name: Path to the CSV file.
     :return: Pandas DataFrame with a 'date' column converted to datetime.
@@ -56,5 +60,33 @@ def get_statistics_from_file(file_name: str) -> None:
         print(f"An unexpected error occurred: {error}")
 
 
+def analyze_keywords(file_name: str, top_n: int = 10) -> None:
+    """
+    Analyzes the most common keywords in news titles.
+
+    :param file_name: Path to the CSV file.
+    :param top_n: Number of top keywords to display.
+    """
+    try:
+        dataframe = load_csv(file_name)
+
+        if "title" not in dataframe.columns:
+            print("Error: No 'title' column found in the CSV file.")
+            return
+
+        text = " ".join(dataframe["title"].dropna())
+        words = re.findall(r"\b\w{4,}\b", text.lower())
+        word_counts = Counter(words)
+
+        print(f"\nTop {top_n} keywords in news titles:")
+        for word, count in word_counts.most_common(top_n):
+            print(f"{word}: {count} times")
+
+    except Exception as error:
+        print(f"An error occurred while analyzing keywords: {error}")
+
+
 if __name__ == "__main__":
-    get_statistics_from_file("news.csv")
+    FILE_PATH = "news.csv"
+    get_statistics_from_file(FILE_PATH)
+    analyze_keywords(FILE_PATH, top_n=10)

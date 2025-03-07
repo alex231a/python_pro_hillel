@@ -80,17 +80,29 @@ def parse_news(soup, filter_date=None):
 
             text_tag = item.find("div", class_="article__text")
             if text_tag:
+                date_tag = text_tag.find("div", class_="article__date")
+                # print(date_tag.text)
+                if date_tag:
+                    date_value = format_article_date(
+                        date_tag.text.strip().split(" - ")[-1])
+                    if isinstance(date_value, list):
+                        article["date"] = date_value[0] if date_value else None
+                    else:
+                        article["date"] = date_value
+                    # print(article["date"])
+                    date_tag.extract()
                 article["summary"] = text_tag.get_text(strip=True)
+                # print(article["summary"])
 
-            date_tag = item.find("div", class_="article__date")
-            if date_tag:
-                # Ensure proper handling of the date field
-                date_value = format_article_date(
-                    date_tag.text.strip().split(" - ")[-1])
-                if isinstance(date_value, list):
-                    article["date"] = date_value[0] if date_value else None
-                else:
-                    article["date"] = date_value
+            # date_tag = item.find("div", class_="article__date")
+            # if date_tag:
+            #     date_value = format_article_date(
+            #         date_tag.text.strip().split(" - ")[-1])
+            #     if isinstance(date_value, list):
+            #         article["date"] = date_value[0] if date_value else None
+            #     else:
+            #         article["date"] = date_value
+            #     print(article["date"])
 
         except AttributeError as error:
             logging.error("Missing field in article: %s", error)

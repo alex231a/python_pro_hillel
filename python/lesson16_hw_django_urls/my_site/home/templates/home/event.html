@@ -1,0 +1,30 @@
+{% extends 'home/base_page.html' %}
+
+{% block title %}
+{% if date %}View Event{% else %}Enter Event Date{% endif %}
+{% endblock %}
+
+{% block content %}
+{% if date %}
+<h1>You are looking for event with which was {{ date.year }}-{{ date.month }}-{{ date.day }}</h1>
+{% else %}
+<h1>Enter Date</h1>
+{% if error %}
+<p style="color: red;">{{ error }}</p>
+{% endif %}
+<form method="post">
+    {% csrf_token %}
+    <label>
+        <input type="text" name="year" placeholder="Enter Year">
+    </label><br>
+    <label>
+        <input type="text" name="month" placeholder="Enter Month">
+    </label><br>
+    <label>
+        <input type="text" name="day" placeholder="Enter Day">
+    </label><br>
+    <button type="submit">Send</button>
+    <br>
+</form>
+{% endif %}
+{% endblock %}

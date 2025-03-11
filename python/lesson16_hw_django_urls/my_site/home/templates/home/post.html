@@ -1,0 +1,21 @@
+{% extends 'home/base_page.html' %}
+
+{% block title %}
+    {% if id %}View Post{% else %}Enter Post ID{% endif %}
+{% endblock %}
+
+{% block content %}
+    {% if id %}
+        <h1>You are looking post with ID = {{ id }}</h1>
+    {% else %}
+        <h1>Enter Post ID</h1>
+        {% if error %}
+            <p style="color: red;">{{ error }}</p>
+        {% endif %}
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" name="post_id" placeholder="Enter ID">
+            <button type="submit">Send</button>
+        </form>
+    {% endif %}
+{% endblock %}

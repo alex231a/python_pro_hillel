@@ -1,0 +1,82 @@
+{% extends 'main/base.html' %}
+
+{% block title %}About Us - My Site{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="text-center">About Our Company</h1>
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <h2>Our History</h2>
+            <p>Last updated: {{ last_updated|date:"F d, Y" }}</p>
+            <p>
+                Founded in 2005, our company started as a small startup with a vision to innovate the tech industry.
+                Over the years, we have expanded globally, providing top-notch solutions to businesses worldwide.
+            </p>
+            <p>
+                Today, we are recognized as an industry leader, with a strong commitment to innovation, quality,
+                and customer satisfaction.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <img src="https://status-media.com/wp-content/uploads/2018/01/status-media.com_d18c8c8e-c97c-4293-8172-8c3bfe5abb77.jpg"
+                 class="img-fluid rounded" alt="Company History" width="500" height="300">
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <img src="https://www.e-xecutive.ru/uploads/article/image/344697/thumb_consulting-3055704_960_720.jpg"
+                 class="img-fluid rounded" alt="Our Mission" width="500" height="300">
+        </div>
+        <div class="col-md-6">
+            <h2>Our Mission</h2>
+            <p>
+                Our mission is to empower businesses through cutting-edge technology solutions that drive efficiency,
+                productivity, and growth. We believe in creating a better future through digital transformation.
+            </p>
+            <p>
+                By focusing on innovation and sustainability, we aim to make a positive impact on society and the
+                environment.
+            </p>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col">
+            <h2 class="text-center">Key Milestones</h2>
+            <table class="table table-striped table-bordered mt-3">
+                <thead class="table-dark">
+                <tr>
+                    <th>Year</th>
+                    <th>Achievement</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>2005</td>
+                    <td>Company founded</td>
+                </tr>
+                <tr>
+                    <td>2010</td>
+                    <td>Expanded to international markets</td>
+                </tr>
+                <tr>
+                    <td>2015</td>
+                    <td>Launched our flagship product</td>
+                </tr>
+                <tr>
+                    <td>2020</td>
+                    <td>Recognized as industry leader</td>
+                </tr>
+                <tr>
+                    <td>2023</td>
+                    <td>Surpassed 1 million customers worldwide</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

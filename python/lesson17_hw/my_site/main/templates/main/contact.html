@@ -1,0 +1,31 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Contact Us - My Site{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="text-center">Contact Us</h1>
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <p>Last updated: {{ last_updated|date:"F d, Y" }}</p>
+            <h2>Our Address</h2>
+            <p>1234 Business Street, Tech City, 56789</p>
+
+            <h2>Phone</h2>
+            <p>+1 (123) 456-7890</p>
+
+            <h2>Email</h2>
+            <p><a href="mailto:info@company.com">info@company.com</a></p>
+        </div>
+
+        <div class="col-md-6">
+            <h2>Our Location</h2>
+            <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345086163!2d144.95565131531577!3d-37.81732797975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d5df1c9b1a7%3A0x5045675218cee17!2zTWVsYm91cm5lLCBBdXN0cmFsaWE!5e0!3m2!1sen!2sus!4v1632924588873!5m2!1sen!2sus"
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+    </div>
+</div>
+{% endblock %}

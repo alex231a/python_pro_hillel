@@ -1,0 +1,53 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Home - My Site{% endblock %}
+
+{% block content %}
+<div class="container text-center">
+    <h1 class="mt-4">Welcome to Our Website!</h1>
+    <p>Last updated: {{ last_updated|date:"F d, Y" }}</p>
+    <p class="lead">Discover our achievements and explore our services to boost your business growth.</p>
+
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-8">
+            <h2>Sales Achievements Over the Years</h2>
+            <table class="table table-striped table-bordered mt-3">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Year</th>
+                        <th>Revenue ($M)</th>
+                        <th>Growth (%)</th>
+                        <th>New Clients</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2023</td>
+                        <td>12.5</td>
+                        <td>15%</td>
+                        <td>320</td>
+                    </tr>
+                    <tr>
+                        <td>2022</td>
+                        <td>10.8</td>
+                        <td>12%</td>
+                        <td>280</td>
+                    </tr>
+                    <tr>
+                        <td>2021</td>
+                        <td>9.6</td>
+                        <td>10%</td>
+                        <td>250</td>
+                    </tr>
+                    <tr>
+                        <td>2020</td>
+                        <td>8.7</td>
+                        <td>8%</td>
+                        <td>200</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

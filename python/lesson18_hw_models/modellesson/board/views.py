@@ -1,4 +1,9 @@
-"""Module Views"""
+"""Module containing views for the board application.
+
+This module includes:
+- `BoardView`: A class-based view that handles displaying ads with filters and sorting.
+- `admin_statistics`: A function-based view that generates statistics for administrators.
+"""
 
 from django.db.models import Count
 from django.shortcuts import render
@@ -8,12 +13,42 @@ from django.views import View
 from .models import Ad, Category, UserProfile, Comment
 
 
-# Create your views here.
 class BoardView(View):
-    """Class BoardViews"""
+    """
+    View for displaying a list of advertisements with filtering and sorting options.
+
+    **Filters:**
+    - `category`: Filter ads by category.
+    - `user`: Filter ads by user.
+    - `price_min`: Minimum price filter.
+    - `price_max`: Maximum price filter.
+    - `search`: Search ads by title.
+    - `filter`: Special filters:
+        - `last_month`: Ads created in the last 30 days.
+        - `active_category`: Only active ads within a selected category.
+        - `comment_count`: Sort ads by the number of comments.
+        - `user_ads`: Filter ads by a specific user.
+
+    **Sorting Options:**
+    - `price_asc`: Sort by price (ascending).
+    - `price_desc`: Sort by price (descending).
+    - `created_at_asc`: Sort by creation date (oldest first).
+    - `created_at_desc`: Sort by creation date (newest first).
+
+    **Template:**
+    - Renders `board/board.html` with filtered ads and categories.
+    """
 
     def get(self, request):
-        """Method for handling GET requests"""
+        """
+        Handles GET requests to display ads with filters and sorting.
+
+        Args:
+            request (HttpRequest): The incoming request object.
+
+        Returns:
+            HttpResponse: Rendered template with ads and filtering options.
+        """
         filter_type = request.GET.get('filter')
         selected_category = request.GET.get('category')
         selected_user = request.GET.get('user')
@@ -22,55 +57,55 @@ class BoardView(View):
         price_max = request.GET.get('price_max')
         sort_by = request.GET.get('sort', 'created_at_desc')
 
-        ads = Ad.objects.all()  # pylint: disable=no-member
+        # Retrieve all ads (queryset)
+        queryset = Ad.objects.all()
 
+        # Apply filters
         if selected_category:
-            ads = ads.filter(category_id=selected_category)
-
+            queryset = queryset.filter(category_id=selected_category)
         if selected_user:
-            ads = ads.filter(user_id=selected_user)
-
+            queryset = queryset.filter(user_id=selected_user)
         if price_min:
-            ads = ads.filter(price__gte=price_min)
-
+            queryset = queryset.filter(price__gte=price_min)
         if price_max:
-            ads = ads.filter(price__lte=price_max)
-
+            queryset = queryset.filter(price__lte=price_max)
         if search_query:
-            ads = ads.filter(title__icontains=search_query)
+            queryset = queryset.filter(title__icontains=search_query)
 
+        # Special filters
         if filter_type == 'last_month':
-            ads = ads.filter(created_at__gte=now() - timedelta(days=30))
-
+            queryset = queryset.filter(
+                created_at__gte=now() - timedelta(days=30))
         elif filter_type == 'active_category':
+            queryset = queryset.filter(is_active=True)
             if selected_category:
-                ads = ads.filter(category_id=selected_category, is_active=True)
-            else:
-                ads = ads.filter(is_active=True)
-
+                queryset = queryset.filter(category_id=selected_category)
         elif filter_type == 'comment_count':
-            ads = ads.annotate(comment_count=Count('comments')).order_by(
-                '-comment_count')
-
+            queryset = queryset.annotate(
+                comment_count=Count('comments')).order_by('-comment_count')
         elif filter_type == "user_ads":
             user_id = request.GET.get('user', 1)
-            ads = ads.filter(user_id=user_id)
+            queryset = queryset.filter(user_id=user_id)
 
+        # Sorting options
         sorting_options = {
             'price_asc': 'price',
             'price_desc': '-price',
             'created_at_asc': 'created_at',
             'created_at_desc': '-created_at'
         }
-        ads = ads.order_by(sorting_options.get(sort_by, '-created_at'))
+        queryset = queryset.order_by(
+            sorting_options.get(sort_by, '-created_at'))
 
-        ads = ads.annotate(comment_count=Count('comments'))
+        # Count comments for each ad
+        queryset = queryset.annotate(comment_count=Count('comments'))
 
-        categories = Category.objects.all()  # pylint: disable=no-member
-        user_profiles = UserProfile.objects.all()  # pylint: disable=no-member
+        # Retrieve all categories and user profiles
+        categories = Category.objects.all()
+        user_profiles = UserProfile.objects.all()
 
         return render(request, "board/board.html", {
-            "ads": ads,
+            "ads": queryset,
             "categories": categories,
             "user_profiles": user_profiles,
             "selected_category": selected_category,
@@ -83,13 +118,30 @@ class BoardView(View):
 
 
 def admin_statistics(request):
-    """Function handle requests for admin statistics"""
+    """
+    View for displaying statistical data about advertisements.
 
-    total_ads = Ad.objects.count()  # pylint: disable=no-member
-    active_ads = Ad.objects.filter(is_active=True).count()  # pylint: disable=no-member
-    inactive_ads = Ad.objects.filter(is_active=False).count()  # pylint: disable=no-member
-    total_comments = Comment.objects.count()  # pylint: disable=no-member
-    ads_per_category = Category.objects.annotate(ad_count=Count('ads'))  # pylint: disable=no-member
+    **Statistics:**
+    - `total_ads`: Total number of ads in the system.
+    - `active_ads`: Number of currently active ads.
+    - `inactive_ads`: Number of inactive ads.
+    - `total_comments`: Total number of comments on all ads.
+    - `ads_per_category`: Number of ads in each category.
+
+    **Template:**
+    - Renders `board/statistics.html` with the statistics.
+
+    Args:
+        request (HttpRequest): The incoming request object.
+
+    Returns:
+        HttpResponse: Rendered template with admin statistics.
+    """
+    total_ads = Ad.objects.count()
+    active_ads = Ad.objects.filter(is_active=True).count()
+    inactive_ads = Ad.objects.filter(is_active=False).count()
+    total_comments = Comment.objects.count()
+    ads_per_category = Category.objects.annotate(ad_count=Count('ads'))
 
     context = {
         "total_ads": total_ads,

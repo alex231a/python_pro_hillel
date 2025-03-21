@@ -1,0 +1,16 @@
+{% extends 'authapp/base.html' %}
+
+{% block title %}Delete Account{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="text-center">Are you sure you want to delete your account?</h1>
+    <p class="text-center">This action cannot be undone.</p>
+
+    <form method="post" class="text-center">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Delete Account</button>
+    </form>
+    <a href="{% url 'profile' %}" class="btn btn-secondary mt-3">Cancel</a>
+</div>
+{% endblock %}

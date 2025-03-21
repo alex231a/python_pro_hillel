@@ -1,0 +1,13 @@
+{% extends 'authapp/base.html' %}
+
+{% block title %}Main Page{% endblock %}
+
+{% block content %}
+<h1>This is main page</h1>
+{% if message %}
+    <h2>{{ message }}</h2>
+{% else %}
+    <h2>Please log in or registrate if you haven't done it yet.</h2>
+{% endif %}
+
+{% endblock %}

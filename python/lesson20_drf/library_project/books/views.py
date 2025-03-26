@@ -1,4 +1,3 @@
-"""Module with view sets"""
 """Module containing view sets for the Book API."""
 
 from django_filters.rest_framework import DjangoFilterBackend
@@ -24,14 +23,14 @@ class StandardResultsSetPagination(PageNumberPagination):
     max_page_size = 100
 
 
-class BookViewSet(viewsets.ModelViewSet):
+class BookViewSet(viewsets.ModelViewSet):  # pylint: disable=too-many-ancestors
     """
     ViewSet for managing books in the API.
     - Requires authentication (JWT or Token)
     - Supports filtering, searching, and ordering
     - Implements pagination with a default page size of 10
     """
-    queryset = Book.objects.all()
+    queryset = Book.objects.all()   # pylint: disable=no-member
     serializer_class = BookSerializer
     authentication_classes = [JWTAuthentication, TokenAuthentication]
     permission_classes = [permissions.IsAuthenticated]

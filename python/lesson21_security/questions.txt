@@ -1,0 +1,145 @@
+##########  Визначення термінів: ##########
+
+XSS (Cross-Site Scripting) – вразливість, що дозволяє зловмисникам вставляти шкідливі скрипти у веб-сторінки,
+які переглядають інші користувачі. Це може призвести до викрадення cookies, крадіжки даних або зміни вмісту сторінки.
+
+SQL Injection – атака, при якій зловмисник вводить шкідливі SQL-запити в поля вводу, що може дозволити змінювати
+або отримувати доступ до даних у базі даних.
+
+CSRF (Cross-Site Request Forgery) – атака, при якій користувач неусвідомлено виконує запит до сайту,
+на якому він аутентифікований, від імені зловмисника.
+
+Clickjacking – атака, при якій зловмисник вставляє прихований iframe з кнопками або посиланнями,
+змушуючи користувача натискати їх, не підозрюючи про це.
+
+Параметризовані запити – спосіб написання SQL-запитів, що дозволяє уникнути SQL-ін'єкцій,
+оскільки введені дані передаються окремо від структури запиту.
+
+Middleware – проміжний шар між запитами та відповідями Django, який дозволяє додавати додаткову логіку,
+наприклад, перевірку безпеки, логування чи зміну заголовків HTTP.
+
+Salt – випадкові дані, які додаються до пароля перед хешуванням, щоб запобігти атакам
+через попередньо обчислені хеші (rainbow tables).
+
+Hashing – процес перетворення вхідних даних у зашифровану, незворотну форму (наприклад, для зберігання паролів).
+
+
+##########  Основні вразливості Django-додатків і способи їх запобігання: ##########
+
+1. SQL Injection
+
+    Використання ORM Django (QuerySet API) замість ручного написання SQL-запитів.
+    Використання параметризованих запитів у raw() запитах.
+
+2. XSS
+
+    Використання автоматичного екранування HTML ({{ variable }} у шаблонах).
+    Використання mark_safe() лише для безпечного HTML-коду.
+
+3. CSRF
+
+    Включення CSRF-захисту через csrf_token у формах.
+    Використання @csrf_protect у представленнях.
+
+4. Clickjacking
+
+    Додавання заголовка X-Frame-Options: DENY у settings.py: X_FRAME_OPTIONS = "DENY"
+
+5. Витік конфіденційних даних
+
+    Використання змінних середовища (.env) для збереження паролів та API-ключів.
+    Використання django-environ для безпечного зчитування конфіденційних даних.
+
+##########  Захист конфіденційних даних користувачів у Django: ##########
+
+1. Зберігання паролів
+
+    Django використовує PBKDF2 + salt за замовчуванням.
+    Можна також використовувати Argon2, bcrypt чи scrypt:
+    PASSWORD_HASHERS = [
+    'django.contrib.auth.hashers.Argon2PasswordHasher',
+]
+
+2. Шифрування даних
+
+    Використання бібліотеки Fernet (cryptography) для шифрування:
+
+    from cryptography.fernet import Fernet
+    key = Fernet.generate_key()
+    cipher_suite = Fernet(key)
+    encrypted_text = cipher_suite.encrypt(b"Sensitive data")
+    decrypted_text = cipher_suite.decrypt(encrypted_text)
+
+3. Обмеження доступу до даних
+    Використання permissions та role-based access control (RBAC).
+
+
+
+##########  Аутентифікація та авторизація в Django: ##########
+
+1. Стандартна аутентифікація Django (django.contrib.auth)
+    + Просте впровадження
+    - Не підтримує соціальні мережі без розширення
+
+2. JWT-аутентифікація (JSON Web Token) (djangorestframework-simplejwt)
+    + Добре підходить для API
+    - Вимагає додаткової перевірки безпеки токенів
+
+3. OAuth 2.0 (social-auth-app-django)
+    + Підтримує логін через Google, Facebook
+    - Складніше налаштовується
+
+4. LDAP-аутентифікація
+    + Корисно для корпоративних додатків
+    - Вимагає LDAP-сервер
+
+
+##########  Безпека сесій користувачів: ##########
+
+    1. Зберігання сесій у базі даних (SESSION_ENGINE = 'django.contrib.sessions.backends.db').
+    2. Використання SESSION_COOKIE_SECURE = True для захисту сесій через HTTPS.
+    3. Встановлення SESSION_EXPIRE_AT_BROWSER_CLOSE = True, щоб закривати сесію при виході.
+    4. Захист від підробки сесій (SESSION_COOKIE_HTTPONLY = True).
+
+##########  Захист Django-додатка від DDoS атак:  ##########
+
+    1. Використання rate limiting (django-ratelimit)
+        from django_ratelimit.decorators import ratelimit
+
+        @ratelimit(key='ip', rate='5/m', method='POST')
+        def my_view(request):
+            pass
+    2. Використання WAF (Web Application Firewall), наприклад, Cloudflare
+    3. Налаштування reverse proxy (Nginx) для обмеження кількості запитів
+
+
+##########  Захист від CSRF:  ##########
+
+    1. Використання csrf_token у формах Django
+        <form method="POST">
+            {% csrf_token %}
+            <input type="text" name="data">
+            <button type="submit">Submit</button>
+        </form>
+    2. Додавання @csrf_protect у представлення
+        from django.views.decorators.csrf import csrf_protect
+        @csrf_protect
+        def my_view(request):
+            pass
+    2. Використання заголовка X-CSRFToken для AJAX-запитів
+        fetch('/api/data/', {
+            method: 'POST',
+            headers: {
+                'X-CSRFToken': getCookie('csrftoken')
+            },
+            body: JSON.stringify({key: "value"})
+        })
+
+
+Висновок
+Django надає потужні механізми безпеки, але розробники повинні дотримуватись найкращих практик:
+    Використовувати параметризовані запити для захисту від SQL Injection
+    Використовувати CSRF-токени
+    Захищати сесії та конфіденційні дані
+    Обмежувати кількість запитів для захисту від DDoS
+Правильна конфігурація дозволить створити безпечний веб-додаток на Django!

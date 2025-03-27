@@ -1,0 +1,77 @@
+# 4. Захист від XSS (шаблон Django автоматично екранує HTML)
+# register.html
+"""
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Register</button>
+</form>
+"""
+
+# 5. Захист від SQL Injection
+from django.db import connection
+
+def get_user_by_email(email):
+    with connection.cursor() as cursor:
+        cursor.execute("SELECT * FROM auth_user WHERE email = %s", [email])
+        return cursor.fetchone()
+
+# 6. Як працює CSRF у Django
+# Django додає CSRF-токен у шаблоні:
+"""
+<form method="post">
+    {% csrf_token %}
+    <input type="text" name="username">
+    <button type="submit">Submit</button>
+</form>
+"""
+# CSRF-токен перевіряється автоматично у POST-запитах.
+
+6. Захист від Clickjacking (settings.py)
+X_FRAME_OPTIONS = 'DENY'
+
+aбо у views.py:
+from django.http import HttpResponse
+
+def clickjacking_protected_view(request):
+    response = HttpResponse("Content")
+    response["X-Frame-Options"] = "DENY"
+    return response
+
+
+7. Захист від DDoS (Rate-limiting)
+
+pip install django-ratelimit
+views.py:
+
+from django_ratelimit.decorators import ratelimit
+
+@ratelimit(key='ip', rate='5/m', method='POST', block=True)
+def login_view(request):
+    ...
+
+
+8. Власна система управління сесіями:
+views.py:
+
+from django.conf import settings
+from django.contrib.sessions.backends.signed_cookies import SessionStore
+from django.http import HttpResponse
+
+def set_custom_session(request):
+    session = SessionStore()
+    session["user_id"] = request.user.id
+    session.create()
+    response = HttpResponse("Session set")
+    response.set_cookie(settings.SESSION_COOKIE_NAME, session.session_key)
+    return response
+
+9. Аудит безпеки
+
+Bandit:
+pip install bandit
+bandit -r .
+
+OWASP Dependency-Check:
+pip install safety
+safety check
